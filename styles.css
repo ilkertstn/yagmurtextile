@@ -70,7 +70,7 @@ textarea {
 .site-header {
   grid-template-columns: auto 1fr auto;
   align-items: center;
-  padding: 12px 0 24px;
+  padding: 6px 0 18px;
 }
 
 .brand,
@@ -78,6 +78,17 @@ textarea {
   font-size: 0.74rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+}
+
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+}
+
+.brand-logo img {
+  width: auto;
+  height: 64px;
+  object-fit: contain;
 }
 
 .site-nav {
@@ -572,6 +583,10 @@ h2 {
   line-height: 1.5;
 }
 
+.form-success[hidden] {
+  display: none;
+}
+
 .contact-meta span {
   display: inline-block;
   margin-bottom: 8px;
@@ -634,6 +649,47 @@ h2 {
 
 .site-footer p {
   font-size: 0.78rem;
+}
+
+.legal-shell {
+  min-height: 100vh;
+}
+
+.legal-header {
+  grid-template-columns: auto 1fr;
+}
+
+.legal-header .button {
+  justify-self: end;
+}
+
+.legal-page {
+  max-width: 860px;
+  padding: 36px 0 72px;
+}
+
+.legal-page h1 {
+  max-width: none;
+  margin-bottom: 28px;
+  font-size: clamp(2.4rem, 6vw, 4rem);
+}
+
+.legal-content {
+  display: grid;
+  gap: 18px;
+}
+
+.legal-content h2 {
+  max-width: none;
+  margin-top: 20px;
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+}
+
+.legal-content p {
+  color: var(--muted);
+  line-height: 1.75;
 }
 
 @media (max-width: 1080px) {
