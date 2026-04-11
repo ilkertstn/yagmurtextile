@@ -32,7 +32,25 @@
           <a href="#services">Services</a>
           <a href="#contact">Contact</a>
         </nav>
-        <a class="button button-dark" href="#contact">Get a Quote</a>
+        <div class="header-actions">
+          <div class="lang-dropdown">
+            <button
+              class="lang-toggle"
+              type="button"
+              id="lang-toggle"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <span id="lang-current">EN</span>
+            </button>
+            <div class="lang-menu" id="lang-menu" hidden>
+              <button class="lang-button is-active" type="button" data-lang="en">EN</button>
+              <button class="lang-button" type="button" data-lang="tr">TR</button>
+              <button class="lang-button" type="button" data-lang="ru">RU</button>
+            </div>
+          </div>
+          <a class="button button-dark" href="#contact">Get a Quote</a>
+        </div>
       </header>
 
       <main id="top">
@@ -306,7 +324,7 @@
               ></textarea>
             </label>
             <button class="button button-dark button-block" type="submit">
-              Submit RFQ
+              Submit
             </button>
           </form>
         </section>
@@ -360,9 +378,280 @@
       </footer>
     </div>
     <script>
+      const translations = {
+        en: {
+          title: "MA Yagmur Textile | Premium Shirt Manufacturer",
+          description:
+            "Premium shirt manufacturing and private label production from Istanbul for global fashion brands.",
+          nav: ["About", "Products", "Process", "Services", "Contact"],
+          topQuote: "Get a Quote",
+          heroEyebrow: "EST. 2007 • ISTANBUL",
+          heroTitle: "Premium Shirt Manufacturer from Turkey",
+          heroText:
+            "High-quality shirt production and private label solutions for global brands. Precision-cut manufacturing from the heart of the textile world.",
+          heroButtons: ["Get a Quote", "Contact Us"],
+          aboutEyebrow: "01. HERITAGE & EXPERTISE",
+          aboutTitle: "High-end shirt production for ambitious global brands.",
+          aboutPoints: [
+            "80+ skilled artisans",
+            "Premium shirt manufacturing in Istanbul",
+            "Built for long-term B2B partnerships"
+          ],
+          aboutText:
+            "Our Istanbul-based atelier represents the precision of Turkish textile craftsmanship. We engineer garments that define brands. Our commitment to architectural precision ensures every seam, buttonhole, and collar meets the standards of global luxury markets.",
+          stats: ["Experts", "Annual capacity"],
+          productsEyebrow: "02. STANDARD SILHOUETTES",
+          productsMicro: "Precision in Product Detail",
+          productTitles: [
+            "Classic striped shirt",
+            "Basic white shirt",
+            "Oversized shirt",
+            "Linen shirt"
+          ],
+          productMeta: [
+            "100% cotton poplin",
+            "Egyptian cotton oxford",
+            "Heavyweight twill",
+            "Premium European linen"
+          ],
+          processEyebrow: "03. PRODUCTION WORKFLOW",
+          processTitles: [
+            "Fabric selection",
+            "Cutting",
+            "Sewing",
+            "Quality control",
+            "Packaging"
+          ],
+          processText: [
+            "Turkish and imported mills are curated for drape, touch, and wear.",
+            "Laser-guided pattern cutting keeps sizing consistent across batches.",
+            "Each piece is assembled by specialist teams for clean construction.",
+            "Multiple inspection points verify seams, shape retention, and finish.",
+            "Retail-ready packing supports wholesale, private label, and export."
+          ],
+          servicesEyebrow: "04. SERVICES",
+          servicesTitle: "Private Label Excellence",
+          servicesText:
+            "We offer specialized private label services with low MOQs, flexible production timelines, and complete customization from buttons to trims, manufactured with Turkish precision.",
+          serviceList: [
+            "Custom pattern development",
+            "MOQ: Starting from 100 pieces per model",
+            "We export worldwide",
+            "Working with European brands",
+            "Worldwide export & door-to-door delivery"
+          ],
+          sideTitles: ["Competitive pricing", "Fast turnaround"],
+          sideText: [
+            "Direct-from-manufacturer rates without compromising on the material quality that Turkish textiles are known for.",
+            "Agile production cycles that allow quick replenishment and market responsive collections."
+          ],
+          contactEyebrow: "05. CONNECT",
+          contactTitle: "Get a Free Quote in 24 Hours",
+          contactSubtitle: "Fast response<br />Custom pricing",
+          success:
+            "Thanks, your RFQ has been submitted. We will get back to you shortly.",
+          contactLabels: ["Location", "Inquiries"],
+          whatsapp: "Contact on WhatsApp",
+          formLabels: ["Full name", "Email", "Project type", "Message"],
+          formPlaceholders: [
+            "Your name",
+            "email@company.com",
+            "Describe your product requirements."
+          ],
+          formOptions: ["Private Label Production", "Sampling", "Bulk Manufacturing"],
+          submit: "Submit",
+          footerTitles: ["Services", "Legal", "Follow"],
+          footerServices: ["Fabric sourcing", "Private label"],
+          legalLinks: ["Terms of service", "Privacy policy"],
+          galleryLabel: "Product Gallery",
+          galleries: {
+            "striped-shirt": "Classic striped shirt",
+            "white-shirt": "Basic white shirt"
+          }
+        },
+        tr: {
+          title: "MA Yagmur Textile | Premium Gömlek Üreticisi",
+          description:
+            "İstanbul'dan global markalara premium gömlek üretimi ve private label çözümleri.",
+          nav: ["Hakkımızda", "Ürünler", "Süreç", "Hizmetler", "İletişim"],
+          topQuote: "Teklif Al",
+          heroEyebrow: "2007'DEN BERİ • İSTANBUL",
+          heroTitle: "Türkiye'den Premium Gömlek Üreticisi",
+          heroText:
+            "Global markalar için yüksek kaliteli gömlek üretimi ve private label çözümleri. Tekstil dünyasının kalbinden hassas üretim.",
+          heroButtons: ["Teklif Al", "Bize Ulaşın"],
+          aboutEyebrow: "01. MİRAS VE UZMANLIK",
+          aboutTitle: "İddialı global markalar için üst segment gömlek üretimi.",
+          aboutPoints: [
+            "80+ deneyimli usta",
+            "İstanbul'da premium gömlek üretimi",
+            "Uzun soluklu B2B iş birlikleri için yapılanmış"
+          ],
+          aboutText:
+            "İstanbul merkezli atölyemiz, Türk tekstil zanaatının titizliğini yansıtır. Markanıza kimlik kazandıran ürünler üretiyoruz. Her dikiş, her ilik deliği, her yaka; global lüks pazarların beklediği kaliteyle özenle işlenir.",
+          stats: ["Uzman", "Yıllık kapasite"],
+          productsEyebrow: "02. STANDART SİLÜETLER",
+          productsMicro: "Ürün detayında hassasiyet",
+          productTitles: [
+            "Klasik çizgili gömlek",
+            "Basic beyaz gömlek",
+            "Oversize gömlek",
+            "Keten gömlek"
+          ],
+          productMeta: [
+            "%100 pamuk poplin",
+            "Mısır pamuğu oxford",
+            "Ağır gramaj twill",
+            "Premium Avrupa keteni"
+          ],
+          processEyebrow: "03. ÜRETİM AKIŞI",
+          processTitles: [
+            "Kumaş seçimi",
+            "Kesim",
+            "Dikim",
+            "Kalite kontrol",
+            "Paketleme"
+          ],
+          processText: [
+            "Türk ve ithal kumaşlar döküm, tuşe ve dayanıklılık açısından özenle seçilir.",
+            "Lazer destekli kalıp kesimi partiler boyunca ölçü tutarlılığı sağlar.",
+            "Her parça titiz bir işçilikle uzman ekiplerimiz tarafından dikilir.",
+            "Çok aşamalı kontroller dikiş, form ve bitiş kalitesini doğrular.",
+            "Perakendeye hazır paketleme toptan, private label ve ihracatı destekler."
+          ],
+          servicesEyebrow: "04. HİZMETLER",
+          servicesTitle: "Private Label Mükemmelliği",
+          servicesText:
+            "Düşük MOQ'lar, esnek üretim takvimleri ve düğmeden aksesuara kadar tam özelleştirme ile Türk hassasiyetinde private label üretim hizmetleri sunuyoruz.",
+          serviceList: [
+            "Özel kalıp geliştirme",
+            "MOQ: Model başına 100 adetten başlar",
+            "Dünya geneline ihracat",
+            "Avrupalı markalarla çalışma deneyimi",
+            "Kapıdan kapıya dünya çapında teslimat"
+          ],
+          sideTitles: ["Rekabetçi fiyatlama", "Hızlı termin"],
+          sideText: [
+            "Türk tekstilinin köklü kalite anlayışından ödün vermeden, doğrudan üreticiden rekabetçi fiyatlar.",
+            "Kısa üretim süreleri sayesinde hızlı tekrar siparişler ve mevsimlik koleksiyonlar için her zaman hazırız."
+          ],
+          contactEyebrow: "05. İLETİŞİM",
+          contactTitle: "24 Saat İçinde Ücretsiz Teklif Alın",
+          contactSubtitle: "Hızlı dönüş<br />Özel fiyatlandırma",
+          success: "Teşekkürler, teklif talebiniz gönderildi. En kısa sürede sizinle iletişime geçeceğiz.",
+          contactLabels: ["Adres", "İletişim"],
+          whatsapp: "WhatsApp ile iletişime geçin",
+          formLabels: ["Ad soyad", "E-posta", "Proje tipi", "Mesaj"],
+          formPlaceholders: [
+            "Adınız soyadınız",
+            "email@company.com",
+            "Ürün taleplerinizi açıklayın."
+          ],
+          formOptions: ["Private Label Üretim", "Numune", "Toplu Üretim"],
+          submit: "Gönder",
+          footerTitles: ["Hizmetler", "Yasal", "Bizi Takip Edin"],
+          footerServices: ["Kumaş tedariki", "Private label"],
+          legalLinks: ["Hizmet şartları", "Gizlilik politikası"],
+          galleryLabel: "Ürün Galerisi",
+          galleries: {
+            "striped-shirt": "Klasik çizgili gömlek",
+            "white-shirt": "Basic beyaz gömlek"
+          }
+        },
+        ru: {
+          title: "MA Yagmur Textile | Премиальный производитель рубашек",
+          description:
+            "Премиальное производство рубашек и private label в Стамбуле для международных брендов.",
+          nav: ["О нас", "Продукция", "Процесс", "Услуги", "Контакты"],
+          topQuote: "Запросить цену",
+          heroEyebrow: "С 2007 • СТАМБУЛ",
+          heroTitle: "Премиальный производитель рубашек в Турции",
+          heroText:
+            "Высококачественное производство рубашек и private label решения для международных брендов. Точное производство из сердца текстильной индустрии.",
+          heroButtons: ["Запросить цену", "Связаться"],
+          aboutEyebrow: "01. НАСЛЕДИЕ И ЭКСПЕРТИЗА",
+          aboutTitle: "Премиальное производство рубашек для амбициозных международных брендов.",
+          aboutPoints: [
+            "80+ квалифицированных мастеров",
+            "Премиальное производство рубашек в Стамбуле",
+            "Создано для долгосрочных B2B-партнерств"
+          ],
+          aboutText:
+            "Наше ателье в Стамбуле отражает точность турецкого текстильного мастерства. Мы создаем изделия, которые формируют бренды. Наша приверженность конструктивной точности гарантирует, что каждый шов, петля и воротник соответствуют стандартам мирового luxury-рынка.",
+          stats: ["Эксперты", "Годовая мощность"],
+          productsEyebrow: "02. БАЗОВЫЕ СИЛУЭТЫ",
+          productsMicro: "Точность в деталях продукта",
+          productTitles: [
+            "Классическая полосатая рубашка",
+            "Базовая белая рубашка",
+            "Рубашка оверсайз",
+            "Льняная рубашка"
+          ],
+          productMeta: [
+            "100% хлопковый поплин",
+            "Египетский хлопок оксфорд",
+            "Плотный твил",
+            "Премиальный европейский лен"
+          ],
+          processEyebrow: "03. ПРОИЗВОДСТВЕННЫЙ ПРОЦЕСС",
+          processTitles: [
+            "Выбор ткани",
+            "Раскрой",
+            "Пошив",
+            "Контроль качества",
+            "Упаковка"
+          ],
+          processText: [
+            "Турецкие и импортные ткани отбираются по драпировке, тактильности и износостойкости.",
+            "Лазерно-направляемый раскрой обеспечивает стабильность размеров во всех партиях.",
+            "Каждое изделие собирается специализированными командами для безупречной конструкции.",
+            "Несколько этапов проверки подтверждают качество швов, форму и отделку.",
+            "Упаковка готова для опта, private label и экспортных поставок."
+          ],
+          servicesEyebrow: "04. УСЛУГИ",
+          servicesTitle: "Сильная private label экспертиза",
+          servicesText:
+            "Мы предлагаем private label производство с низкими MOQ, гибкими сроками и полной кастомизацией от пуговиц до отделки, выполненной с турецкой точностью.",
+          serviceList: [
+            "Разработка индивидуальных лекал",
+            "MOQ: от 100 изделий на модель",
+            "Экспорт по всему миру",
+            "Работаем с европейскими брендами",
+            "Мировая доставка door-to-door"
+          ],
+          sideTitles: ["Конкурентные цены", "Быстрые сроки"],
+          sideText: [
+            "Прямые цены от производителя без компромиссов по качеству материалов, которыми славится турецкий текстиль.",
+            "Гибкие производственные циклы позволяют быстро пополнять запасы и выпускать актуальные коллекции."
+          ],
+          contactEyebrow: "05. СВЯЗЬ",
+          contactTitle: "Получите бесплатный расчет за 24 часа",
+          contactSubtitle: "Быстрый ответ<br />Индивидуальная цена",
+          success: "Спасибо, ваш запрос отправлен. Мы свяжемся с вами в ближайшее время.",
+          contactLabels: ["Адрес", "Запросы"],
+          whatsapp: "Связаться через WhatsApp",
+          formLabels: ["Имя", "Email", "Тип проекта", "Сообщение"],
+          formPlaceholders: [
+            "Ваше имя",
+            "email@company.com",
+            "Опишите требования к вашему продукту."
+          ],
+          formOptions: ["Private Label производство", "Сэмплинг", "Массовое производство"],
+          submit: "Отправить RFQ",
+          footerTitles: ["Услуги", "Правовая информация", "Соцсети"],
+          footerServices: ["Подбор тканей", "Private label"],
+          legalLinks: ["Условия использования", "Политика конфиденциальности"],
+          galleryLabel: "Галерея продукта",
+          galleries: {
+            "striped-shirt": "Классическая полосатая рубашка",
+            "white-shirt": "Базовая белая рубашка"
+          }
+        }
+      };
+
       const galleries = {
         "striped-shirt": {
-          title: "Classic striped shirt",
+          key: "striped-shirt",
           images: [
             { src: "./assets/cizgili-genel.png", alt: "Classic striped shirt front view" },
             { src: "./assets/cizgili-detay.png", alt: "Classic striped shirt detail view" },
@@ -370,7 +659,7 @@
           ]
         },
         "white-shirt": {
-          title: "Basic white shirt",
+          key: "white-shirt",
           images: [
             { src: "./assets/beyaz-genel.png", alt: "Basic white shirt front view" },
             { src: "./assets/beyaz-detay.png", alt: "Basic white shirt detail view" },
@@ -389,9 +678,16 @@
       const closeTargets = document.querySelectorAll("[data-close-lightbox]");
       const contactForm = document.querySelector(".contact-form");
       const nextInput = document.querySelector('input[name="_next"]');
+      const successMessage = document.getElementById("form-success");
+      const langButtons = document.querySelectorAll(".lang-button");
+      const metaDescription = document.querySelector('meta[name="description"]');
+      const langToggle = document.getElementById("lang-toggle");
+      const langMenu = document.getElementById("lang-menu");
+      const langCurrent = document.getElementById("lang-current");
 
       let activeGallery = null;
       let activeIndex = 0;
+      let currentLang = localStorage.getItem("site_lang") || "en";
 
       function renderLightbox() {
         if (!activeGallery) return;
@@ -399,7 +695,7 @@
         const item = activeGallery.images[activeIndex];
         lightboxImage.src = item.src;
         lightboxImage.alt = item.alt;
-        lightboxTitle.textContent = activeGallery.title;
+        lightboxTitle.textContent = translations[currentLang].galleries[activeGallery.key];
         lightboxDots.innerHTML = "";
 
         activeGallery.images.forEach((_, index) => {
@@ -431,6 +727,104 @@
         }
       }
 
+      function applyLanguage(lang) {
+        currentLang = lang;
+        localStorage.setItem("site_lang", lang);
+        document.documentElement.lang = lang;
+        document.title = translations[lang].title;
+        if (metaDescription) metaDescription.setAttribute("content", translations[lang].description);
+
+        const navLinks = document.querySelectorAll(".site-nav a");
+        navLinks.forEach((link, index) => {
+          link.textContent = translations[lang].nav[index];
+        });
+
+        document.querySelector(".header-actions .button").textContent = translations[lang].topQuote;
+        document.querySelector(".hero-copy .eyebrow").textContent = translations[lang].heroEyebrow;
+        document.querySelector(".hero-copy h1").textContent = translations[lang].heroTitle;
+        document.querySelector(".hero-copy .hero-text").textContent = translations[lang].heroText;
+        document.querySelectorAll(".hero-actions .button")[0].textContent = translations[lang].heroButtons[0];
+        document.querySelectorAll(".hero-actions .button")[1].textContent = translations[lang].heroButtons[1];
+
+        document.querySelector(".intro-copy .eyebrow").textContent = translations[lang].aboutEyebrow;
+        document.querySelector(".intro-copy h2").textContent = translations[lang].aboutTitle;
+        document.querySelectorAll(".intro-points li").forEach((item, index) => {
+          item.textContent = translations[lang].aboutPoints[index];
+        });
+        document.querySelector(".intro-side p").textContent = translations[lang].aboutText;
+        document.querySelectorAll(".stats span")[0].textContent = translations[lang].stats[0];
+        document.querySelectorAll(".stats span")[1].textContent = translations[lang].stats[1];
+
+        document.querySelector("#products .eyebrow").textContent = translations[lang].productsEyebrow;
+        document.querySelector("#products .microcopy").textContent = translations[lang].productsMicro;
+        document.querySelectorAll(".product-card h3").forEach((item, index) => {
+          item.textContent = translations[lang].productTitles[index];
+        });
+        document.querySelectorAll(".product-card p").forEach((item, index) => {
+          item.textContent = translations[lang].productMeta[index];
+        });
+
+        document.querySelector("#process .eyebrow").textContent = translations[lang].processEyebrow;
+        document.querySelectorAll(".workflow-card h3").forEach((item, index) => {
+          item.textContent = translations[lang].processTitles[index];
+        });
+        document.querySelectorAll(".workflow-card p").forEach((item, index) => {
+          item.textContent = translations[lang].processText[index];
+        });
+
+        document.querySelector("#services .service-main .eyebrow").textContent = translations[lang].servicesEyebrow;
+        document.querySelector("#services .service-main h2").textContent = translations[lang].servicesTitle;
+        document.querySelector("#services .service-main > h2 + p").textContent = translations[lang].servicesText;
+        document.querySelectorAll(".service-list li").forEach((item, index) => {
+          item.textContent = translations[lang].serviceList[index];
+        });
+        document.querySelectorAll(".service-side .eyebrow").forEach((item, index) => {
+          item.textContent = translations[lang].sideTitles[index];
+        });
+        document.querySelectorAll(".service-side p:last-child").forEach((item, index) => {
+          item.textContent = translations[lang].sideText[index];
+        });
+
+        document.querySelector("#contact .eyebrow").textContent = translations[lang].contactEyebrow;
+        document.querySelector("#contact h2").textContent = translations[lang].contactTitle;
+        document.querySelector("#contact .hero-text").innerHTML = translations[lang].contactSubtitle;
+        if (successMessage) successMessage.textContent = translations[lang].success;
+        document.querySelectorAll(".contact-meta span")[0].textContent = translations[lang].contactLabels[0];
+        document.querySelectorAll(".contact-meta span")[1].textContent = translations[lang].contactLabels[1];
+        document.querySelector(".contact-link").textContent = translations[lang].whatsapp;
+
+        document.querySelectorAll(".contact-form label span")[0].textContent = translations[lang].formLabels[0];
+        document.querySelectorAll(".contact-form label span")[1].textContent = translations[lang].formLabels[1];
+        document.querySelectorAll(".contact-form label span")[2].textContent = translations[lang].formLabels[2];
+        document.querySelectorAll(".contact-form label span")[3].textContent = translations[lang].formLabels[3];
+        document.querySelector('input[name="name"]').placeholder = translations[lang].formPlaceholders[0];
+        document.querySelector('input[name="email"]').placeholder = translations[lang].formPlaceholders[1];
+        document.querySelector('textarea[name="message"]').placeholder = translations[lang].formPlaceholders[2];
+        document.querySelectorAll('select[name="projectType"] option').forEach((item, index) => {
+          item.textContent = translations[lang].formOptions[index];
+        });
+        document.querySelector('.contact-form button[type="submit"]').textContent = translations[lang].submit;
+
+        document.querySelectorAll(".site-footer .footer-title")[1].textContent = translations[lang].footerTitles[0];
+        document.querySelectorAll(".site-footer .footer-title")[2].textContent = translations[lang].footerTitles[1];
+        document.querySelectorAll(".site-footer .footer-title")[3].textContent = translations[lang].footerTitles[2];
+        document.querySelectorAll(".site-footer > div:nth-child(2) p")[1].textContent = translations[lang].footerServices[0];
+        document.querySelectorAll(".site-footer > div:nth-child(2) p")[2].textContent = translations[lang].footerServices[1];
+        document.querySelectorAll(".site-footer > div:nth-child(3) a")[0].textContent = translations[lang].legalLinks[0];
+        document.querySelectorAll(".site-footer > div:nth-child(3) a")[1].textContent = translations[lang].legalLinks[1];
+        document.querySelector(".lightbox-footer .eyebrow").textContent = translations[lang].galleryLabel;
+
+        langButtons.forEach((button) => {
+          button.classList.toggle("is-active", button.dataset.lang === lang);
+        });
+
+        if (langCurrent) {
+          langCurrent.textContent = lang.toUpperCase();
+        }
+
+        if (activeGallery) renderLightbox();
+      }
+
       productTriggers.forEach((trigger) => {
         trigger.addEventListener("click", () => openLightbox(trigger.dataset.gallery));
       });
@@ -458,28 +852,55 @@
         if (event.key === "ArrowRight") nextButton.click();
       });
 
-      const params = new URLSearchParams(window.location.search);
-      const successMessage = document.getElementById("form-success");
-
       if (nextInput) {
         nextInput.value = window.location.origin + window.location.pathname + "?rfq=success#contact";
       }
 
       if (contactForm) {
         contactForm.addEventListener("submit", () => {
-          localStorage.setItem("rfq_pending_notice", "1");
+          sessionStorage.setItem("rfq_pending_notice", "1");
         });
       }
 
+      langButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          applyLanguage(button.dataset.lang);
+          if (langMenu && langToggle) {
+            langMenu.hidden = true;
+            langToggle.setAttribute("aria-expanded", "false");
+          }
+        });
+      });
+
+      if (langToggle && langMenu) {
+        langToggle.addEventListener("click", () => {
+          const isOpen = langMenu.hidden === false;
+          langMenu.hidden = isOpen;
+          langToggle.setAttribute("aria-expanded", String(!isOpen));
+        });
+
+        document.addEventListener("click", (event) => {
+          if (!event.target.closest(".lang-dropdown")) {
+            langMenu.hidden = true;
+            langToggle.setAttribute("aria-expanded", "false");
+          }
+        });
+      }
+
+      const params = new URLSearchParams(window.location.search);
       const shouldShowSuccess =
-        params.get("rfq") === "success" ||
-        (localStorage.getItem("rfq_pending_notice") === "1" &&
-          document.referrer.includes("formsubmit.co"));
+        params.get("rfq") === "success" &&
+        sessionStorage.getItem("rfq_pending_notice") === "1";
 
       if (shouldShowSuccess && successMessage) {
         successMessage.hidden = false;
-        localStorage.removeItem("rfq_pending_notice");
+        sessionStorage.removeItem("rfq_pending_notice");
+        window.history.replaceState({}, "", window.location.pathname + "#contact");
+      } else {
+        sessionStorage.removeItem("rfq_pending_notice");
       }
+
+      applyLanguage(currentLang);
     </script>
   </body>
 </html>
