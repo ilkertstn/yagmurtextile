@@ -83,8 +83,9 @@
               id="lang-toggle"
               aria-haspopup="true"
               aria-expanded="false"
+              aria-label="Selected language: EN"
             >
-              <span id="lang-current">EN</span>
+              EN
             </button>
             <div class="lang-menu" id="lang-menu" hidden>
               <button class="lang-button is-active" type="button" data-lang="en">EN</button>
@@ -724,8 +725,6 @@
       const metaDescription = document.querySelector('meta[name="description"]');
       const langToggle = document.getElementById("lang-toggle");
       const langMenu = document.getElementById("lang-menu");
-      const langCurrent = document.getElementById("lang-current");
-
       let activeGallery = null;
       let activeIndex = 0;
       let currentLang = localStorage.getItem("site_lang") || "en";
@@ -769,99 +768,101 @@
       }
 
       function applyLanguage(lang) {
-        currentLang = lang;
-        localStorage.setItem("site_lang", lang);
-        document.documentElement.lang = lang;
-        document.title = translations[lang].title;
-        if (metaDescription) metaDescription.setAttribute("content", translations[lang].description);
+        const nextLang = translations[lang] ? lang : "en";
+        currentLang = nextLang;
+        localStorage.setItem("site_lang", nextLang);
+        document.documentElement.lang = nextLang;
+        document.title = translations[nextLang].title;
+
+        if (langToggle) {
+          langToggle.textContent = nextLang.toUpperCase();
+          langToggle.setAttribute("aria-label", "Selected language: " + nextLang.toUpperCase());
+        }
+        if (metaDescription) metaDescription.setAttribute("content", translations[nextLang].description);
 
         const navLinks = document.querySelectorAll(".site-nav a");
         navLinks.forEach((link, index) => {
-          link.textContent = translations[lang].nav[index];
+          link.textContent = translations[nextLang].nav[index];
         });
 
-        document.querySelector(".header-actions .button").textContent = translations[lang].topQuote;
-        document.querySelector(".hero-copy .eyebrow").textContent = translations[lang].heroEyebrow;
-        document.querySelector(".hero-copy h1").textContent = translations[lang].heroTitle;
-        document.querySelector(".hero-copy .hero-text").textContent = translations[lang].heroText;
-        document.querySelectorAll(".hero-actions .button")[0].textContent = translations[lang].heroButtons[0];
-        document.querySelectorAll(".hero-actions .button")[1].textContent = translations[lang].heroButtons[1];
+        document.querySelector(".hero-copy .eyebrow").textContent = translations[nextLang].heroEyebrow;
+        document.querySelector(".hero-copy h1").textContent = translations[nextLang].heroTitle;
+        document.querySelector(".hero-copy .hero-text").textContent = translations[nextLang].heroText;
+        document.querySelectorAll(".hero-actions .button")[0].textContent = translations[nextLang].heroButtons[0];
+        document.querySelectorAll(".hero-actions .button")[1].textContent = translations[nextLang].heroButtons[1];
 
-        document.querySelector(".intro-copy .eyebrow").textContent = translations[lang].aboutEyebrow;
-        document.querySelector(".intro-copy h2").textContent = translations[lang].aboutTitle;
+        document.querySelector(".intro-copy .eyebrow").textContent = translations[nextLang].aboutEyebrow;
+        document.querySelector(".intro-copy h2").textContent = translations[nextLang].aboutTitle;
         document.querySelectorAll(".intro-points li").forEach((item, index) => {
-          item.textContent = translations[lang].aboutPoints[index];
+          item.textContent = translations[nextLang].aboutPoints[index];
         });
-        document.querySelector(".intro-side p").textContent = translations[lang].aboutText;
-        document.querySelectorAll(".stats span")[0].textContent = translations[lang].stats[0];
-        document.querySelectorAll(".stats span")[1].textContent = translations[lang].stats[1];
+        document.querySelector(".intro-side p").textContent = translations[nextLang].aboutText;
+        document.querySelectorAll(".stats span")[0].textContent = translations[nextLang].stats[0];
+        document.querySelectorAll(".stats span")[1].textContent = translations[nextLang].stats[1];
 
-        document.querySelector("#products .eyebrow").textContent = translations[lang].productsEyebrow;
-        document.querySelector("#products .microcopy").textContent = translations[lang].productsMicro;
+        document.querySelector("#products .eyebrow").textContent = translations[nextLang].productsEyebrow;
+        document.querySelector("#products .microcopy").textContent = translations[nextLang].productsMicro;
         document.querySelectorAll(".product-card h3").forEach((item, index) => {
-          item.textContent = translations[lang].productTitles[index];
+          item.textContent = translations[nextLang].productTitles[index];
         });
         document.querySelectorAll(".product-card p").forEach((item, index) => {
-          item.textContent = translations[lang].productMeta[index];
+          item.textContent = translations[nextLang].productMeta[index];
         });
 
-        document.querySelector("#process .eyebrow").textContent = translations[lang].processEyebrow;
+        document.querySelector("#process .eyebrow").textContent = translations[nextLang].processEyebrow;
         document.querySelectorAll(".workflow-card h3").forEach((item, index) => {
-          item.textContent = translations[lang].processTitles[index];
+          item.textContent = translations[nextLang].processTitles[index];
         });
         document.querySelectorAll(".workflow-card p").forEach((item, index) => {
-          item.textContent = translations[lang].processText[index];
+          item.textContent = translations[nextLang].processText[index];
         });
 
-        document.querySelector("#services .service-main .eyebrow").textContent = translations[lang].servicesEyebrow;
-        document.querySelector("#services .service-main h2").textContent = translations[lang].servicesTitle;
-        document.querySelector("#services .service-main > h2 + p").textContent = translations[lang].servicesText;
+        document.querySelector("#services .service-main .eyebrow").textContent = translations[nextLang].servicesEyebrow;
+        document.querySelector("#services .service-main h2").textContent = translations[nextLang].servicesTitle;
+        document.querySelector("#services .service-main > h2 + p").textContent = translations[nextLang].servicesText;
         document.querySelectorAll(".service-list li").forEach((item, index) => {
-          item.textContent = translations[lang].serviceList[index];
+          item.textContent = translations[nextLang].serviceList[index];
         });
         document.querySelectorAll(".service-side .eyebrow").forEach((item, index) => {
-          item.textContent = translations[lang].sideTitles[index];
+          item.textContent = translations[nextLang].sideTitles[index];
         });
         document.querySelectorAll(".service-side p:last-child").forEach((item, index) => {
-          item.textContent = translations[lang].sideText[index];
+          item.textContent = translations[nextLang].sideText[index];
         });
 
-        document.querySelector("#contact .eyebrow").textContent = translations[lang].contactEyebrow;
-        document.querySelector("#contact h2").textContent = translations[lang].contactTitle;
-        document.querySelector("#contact .hero-text").innerHTML = translations[lang].contactSubtitle;
-        if (successMessage) successMessage.textContent = translations[lang].success;
-        document.querySelectorAll(".contact-meta span")[0].textContent = translations[lang].contactLabels[0];
-        document.querySelectorAll(".contact-meta span")[1].textContent = translations[lang].contactLabels[1];
-        document.querySelector(".contact-link").textContent = translations[lang].whatsapp;
+        document.querySelector("#contact .eyebrow").textContent = translations[nextLang].contactEyebrow;
+        document.querySelector("#contact h2").textContent = translations[nextLang].contactTitle;
+        document.querySelector("#contact .hero-text").innerHTML = translations[nextLang].contactSubtitle;
+        if (successMessage) successMessage.textContent = translations[nextLang].success;
+        document.querySelectorAll(".contact-meta span")[0].textContent = translations[nextLang].contactLabels[0];
+        document.querySelectorAll(".contact-meta span")[1].textContent = translations[nextLang].contactLabels[1];
+        document.querySelector(".contact-link").textContent = translations[nextLang].whatsapp;
 
-        document.querySelectorAll(".contact-form label span")[0].textContent = translations[lang].formLabels[0];
-        document.querySelectorAll(".contact-form label span")[1].textContent = translations[lang].formLabels[1];
-        document.querySelectorAll(".contact-form label span")[2].textContent = translations[lang].formLabels[2];
-        document.querySelectorAll(".contact-form label span")[3].textContent = translations[lang].formLabels[3];
-        document.querySelector('input[name="name"]').placeholder = translations[lang].formPlaceholders[0];
-        document.querySelector('input[name="email"]').placeholder = translations[lang].formPlaceholders[1];
-        document.querySelector('textarea[name="message"]').placeholder = translations[lang].formPlaceholders[2];
+        document.querySelectorAll(".contact-form label span")[0].textContent = translations[nextLang].formLabels[0];
+        document.querySelectorAll(".contact-form label span")[1].textContent = translations[nextLang].formLabels[1];
+        document.querySelectorAll(".contact-form label span")[2].textContent = translations[nextLang].formLabels[2];
+        document.querySelectorAll(".contact-form label span")[3].textContent = translations[nextLang].formLabels[3];
+        document.querySelector('input[name="name"]').placeholder = translations[nextLang].formPlaceholders[0];
+        document.querySelector('input[name="email"]').placeholder = translations[nextLang].formPlaceholders[1];
+        document.querySelector('textarea[name="message"]').placeholder = translations[nextLang].formPlaceholders[2];
         document.querySelectorAll('select[name="projectType"] option').forEach((item, index) => {
-          item.textContent = translations[lang].formOptions[index];
+          item.textContent = translations[nextLang].formOptions[index];
         });
-        document.querySelector('.contact-form button[type="submit"]').textContent = translations[lang].submit;
+        document.querySelector('.contact-form button[type="submit"]').textContent = translations[nextLang].submit;
 
-        document.querySelectorAll(".site-footer .footer-title")[1].textContent = translations[lang].footerTitles[0];
-        document.querySelectorAll(".site-footer .footer-title")[2].textContent = translations[lang].footerTitles[1];
-        document.querySelectorAll(".site-footer .footer-title")[3].textContent = translations[lang].footerTitles[2];
-        document.querySelectorAll(".site-footer > div:nth-child(2) p")[1].textContent = translations[lang].footerServices[0];
-        document.querySelectorAll(".site-footer > div:nth-child(2) p")[2].textContent = translations[lang].footerServices[1];
-        document.querySelectorAll(".site-footer > div:nth-child(3) a")[0].textContent = translations[lang].legalLinks[0];
-        document.querySelectorAll(".site-footer > div:nth-child(3) a")[1].textContent = translations[lang].legalLinks[1];
-        document.querySelector(".lightbox-footer .eyebrow").textContent = translations[lang].galleryLabel;
+        document.querySelectorAll(".site-footer .footer-title")[1].textContent = translations[nextLang].footerTitles[0];
+        document.querySelectorAll(".site-footer .footer-title")[2].textContent = translations[nextLang].footerTitles[1];
+        document.querySelectorAll(".site-footer .footer-title")[3].textContent = translations[nextLang].footerTitles[2];
+        document.querySelectorAll(".site-footer > div:nth-child(2) p")[1].textContent = translations[nextLang].footerServices[0];
+        document.querySelectorAll(".site-footer > div:nth-child(2) p")[2].textContent = translations[nextLang].footerServices[1];
+        document.querySelectorAll(".site-footer > div:nth-child(3) a")[0].textContent = translations[nextLang].legalLinks[0];
+        document.querySelectorAll(".site-footer > div:nth-child(3) a")[1].textContent = translations[nextLang].legalLinks[1];
+        document.querySelector(".lightbox-footer .eyebrow").textContent = translations[nextLang].galleryLabel;
 
         langButtons.forEach((button) => {
-          button.classList.toggle("is-active", button.dataset.lang === lang);
+          button.classList.toggle("is-active", button.dataset.lang === nextLang);
         });
 
-        if (langCurrent) {
-          langCurrent.textContent = lang.toUpperCase();
-        }
 
         if (activeGallery) renderLightbox();
       }
