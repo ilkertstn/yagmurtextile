@@ -93,9 +93,9 @@ textarea {
 }
 
 .site-header {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
   align-items: center;
-  justify-content: space-between;
   padding: 28px 0 18px;
   gap: 24px;
 }
@@ -103,6 +103,7 @@ textarea {
 .brand {
   display: inline-flex;
   align-items: center;
+  justify-self: start;
 }
 
 .brand img {
@@ -119,6 +120,7 @@ textarea {
   font-weight: 500;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  justify-self: center;
 }
 
 .site-nav a,
@@ -158,15 +160,35 @@ textarea {
   border: 1px solid var(--line);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.45);
-  display: grid;
-  place-items: center;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  flex-direction: column;
+  padding: 0;
+  cursor: pointer;
+  justify-self: end;
 }
 
 .nav-button span {
-  width: 12px;
-  height: 12px;
-  border: 1.4px solid var(--ink);
+  display: block;
+  width: 14px;
+  height: 1.4px;
+  background: var(--ink);
   border-radius: 999px;
+  transition: transform 180ms ease, opacity 180ms ease;
+}
+
+.nav-button.is-open span:nth-child(1) {
+  transform: translateY(4.4px) rotate(45deg);
+}
+
+.nav-button.is-open span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-button.is-open span:nth-child(3) {
+  transform: translateY(-4.4px) rotate(-45deg);
 }
 
 .hero {
@@ -1731,8 +1753,57 @@ textarea {
 }
 
 @media (max-width: 980px) {
+  .site-header {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    min-height: 86px;
+    padding-right: 56px;
+  }
+
   .site-nav {
     display: none;
+    position: absolute;
+    top: calc(100% - 2px);
+    left: 0;
+    right: 0;
+    z-index: 20;
+    width: 100%;
+    padding: 26px 24px 24px;
+    background: rgba(249, 246, 241, 0.98);
+    border: 1px solid var(--line);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    letter-spacing: 0.14em;
+    box-shadow: 0 26px 48px rgba(15, 16, 20, 0.12);
+    backdrop-filter: blur(12px);
+    border-radius: 0 0 24px 24px;
+  }
+
+  .site-nav.is-open {
+    display: flex;
+  }
+
+  .site-nav a {
+    display: block;
+    width: 100%;
+    padding-bottom: 12px;
+    font-size: 0.92rem;
+    border-bottom: 1px solid rgba(23, 20, 18, 0.1);
+  }
+
+  .site-nav a:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  .nav-button {
+    display: flex;
+    position: absolute;
+    top: 28px;
+    right: 0;
   }
 
   .hero,
@@ -1952,6 +2023,16 @@ textarea {
 
   .site-header {
     padding-top: 18px;
+    padding-right: 48px;
+  }
+
+  .site-nav {
+    top: calc(100% - 6px);
+    padding: 22px 18px 20px;
+  }
+
+  .nav-button {
+    top: 18px;
   }
 
   .hero {

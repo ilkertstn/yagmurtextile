@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 const navItems = [
   { href: "/", label: "Home" },
@@ -12,6 +13,11 @@ const navItems = [
 
 export default function SiteHeader() {
   const pathname = usePathname();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [pathname]);
 
   return (
     <header className="site-header">
@@ -19,7 +25,11 @@ export default function SiteHeader() {
         <img src="/assets/logo-cropped.png" alt="MA Yagmur Textile" />
       </Link>
 
-      <nav className="site-nav" aria-label="Main menu">
+      <nav
+        className={`site-nav ${isMenuOpen ? "is-open" : ""}`}
+        aria-label="Main menu"
+        id="site-menu"
+      >
         {navItems.map((item) => {
           const isActive =
             item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
@@ -36,7 +46,16 @@ export default function SiteHeader() {
         })}
       </nav>
 
-      <button className="nav-button" type="button" aria-label="Account">
+      <button
+        className={`nav-button ${isMenuOpen ? "is-open" : ""}`}
+        type="button"
+        aria-label="Toggle navigation menu"
+        aria-expanded={isMenuOpen}
+        aria-controls="site-menu"
+        onClick={() => setIsMenuOpen((open) => !open)}
+      >
+        <span></span>
+        <span></span>
         <span></span>
       </button>
     </header>
