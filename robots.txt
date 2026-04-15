@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yagmurtextile.vercel.app/sitemap.xml
