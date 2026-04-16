@@ -1,4 +1,5 @@
 import Link from "next/link";
+import MailtoContactForm from "../../components/mailto-contact-form";
 
 export const metadata = {
   title: "Manufacturing",
@@ -59,15 +60,11 @@ export default function ManufacturingPage() {
           aria-label="Manufacturing workshop overview"
         ></video>
         <div className="manufacturing-hero-overlay">
-          <p className="eyebrow">Shirt Manufacturing Istanbul</p>
-          <h1>
-            Precision at
-            <em>Global Scale.</em>
-          </h1>
+          <p className="eyebrow">Private Label Shirt Manufacturing — Istanbul</p>
+          <h1>Precision Manufacturing at Scale.</h1>
           <p className="lead">
-            We manufacture private label shirt collections with disciplined
-            workshop control, structured production systems, and export-ready
-            execution for wholesale partners.
+            We manufacture private label shirts with structured production,
+            consistent quality, and export-ready execution for global partners.
           </p>
         </div>
       </section>
@@ -75,19 +72,19 @@ export default function ManufacturingPage() {
       <section className="manufacturing-metrics">
         <div>
           <strong>420k</strong>
-          <span>Monthly Meterage Capacity</span>
+          <span>Monthly Fabric Capacity</span>
         </div>
         <div>
           <strong>58</strong>
-          <span>Global Export Markets</span>
+          <span>Export Markets Worldwide</span>
         </div>
         <div>
           <strong>100%</strong>
-          <span>Oeko-Tex Certified</span>
+          <span>OEKO-TEX Certified</span>
         </div>
         <div>
-          <strong>24hr</strong>
-          <span>Rapid Prototyping Cycle</span>
+          <strong>24h</strong>
+          <span>Rapid Sampling Cycle</span>
         </div>
       </section>
 
@@ -97,17 +94,17 @@ export default function ManufacturingPage() {
         </div>
         <div className="atelier-overview-copy">
           <p className="eyebrow">Workshop Culture</p>
-          <h2>Manufacturing discipline rooted in workshop care.</h2>
+          <h2>Manufacturing discipline rooted in craftsmanship.</h2>
           <p>
-            Our production floor combines hands-on textile know-how with a
-            structured manufacturing rhythm. Each shirt program is developed
-            through controlled sampling, monitored sewing lines, and repeatable
+            Our production floor combines hands-on textile expertise with
+            structured manufacturing processes. Each collection is developed
+            through controlled sampling, monitored sewing lines, and consistent
             finishing standards.
           </p>
           <p>
             What clients experience as consistency is built from daily
-            discipline: line checks, fabric inspection, fit validation, and a
-            workshop culture that treats every order as a long-term account.
+            discipline - line checks, fabric inspection, fit validation, and a
+            culture that treats every order as a long-term partnership.
           </p>
           <div className="atelier-overview-stats">
             <div>
@@ -116,7 +113,7 @@ export default function ManufacturingPage() {
             </div>
             <div>
               <strong>Istanbul</strong>
-              <span>Integrated Workshop Base</span>
+              <span>Integrated Workshop - Istanbul</span>
             </div>
           </div>
         </div>
@@ -124,8 +121,8 @@ export default function ManufacturingPage() {
 
       <section className="quality-section">
         <div className="quality-heading">
-          <p className="eyebrow">Quality Control</p>
-          <h2>Quality systems that support every production run.</h2>
+          <p className="eyebrow">Quality & Production Control</p>
+          <h2>Structured controls across every stage of production.</h2>
         </div>
 
         <div className="quality-grid">
@@ -134,18 +131,18 @@ export default function ManufacturingPage() {
               <span className="quality-icon-badge"></span>
               <span className="quality-icon-check"></span>
             </div>
-            <h3>Zero-Defect Protocol</h3>
+            <h3>Multi-Point Inspection</h3>
             <p>
-              Incoming fabric, inline sewing, and final finishing are all
-              checked through a multi-point inspection sequence before packing.
+              Fabric, stitching, measurements, and finishing are checked at
+              multiple stages before packing.
             </p>
           </article>
 
           <article className="quality-card quality-card-dark">
-            <strong>99.8%</strong>
+            <strong>Inline Checks</strong>
             <p>
-              On-time and quality-aligned delivery rate across private label and
-              wholesale accounts.
+              Quality control continues throughout cutting, sewing, finishing,
+              and final preparation for shipment.
             </p>
           </article>
 
@@ -175,8 +172,8 @@ export default function ManufacturingPage() {
             <div className="quality-overlay">
               <h3>Production Monitoring</h3>
               <p>
-                Material flow, machine calibration, and line supervision stay
-                aligned throughout the full run.
+                Material flow, line control, and finishing follow a structured
+                process throughout production.
               </p>
             </div>
           </article>
@@ -185,12 +182,13 @@ export default function ManufacturingPage() {
 
       <section className="precision-band">
         <div className="precision-copy">
-          <p className="eyebrow">Infrastructure</p>
-          <h2>Industrial precision built for shirting programs.</h2>
+          <p className="eyebrow">Production Infrastructure</p>
+          <h2>Production capacity built for private label shirting.</h2>
           <p>
-            Our facility connects workshop attention with production capacity,
-            allowing us to move from sample development to full shipment
-            planning without losing control over finish, fit, or timing.
+            Our facility combines hands-on workshop attention with structured
+            production capacity, allowing us to move from sampling to bulk
+            manufacturing while maintaining control over fit, finishing, and
+            consistency.
           </p>
         </div>
 
@@ -217,22 +215,23 @@ export default function ManufacturingPage() {
           <div>
             <strong>Capacity</strong>
             <span>
-              Structured production lines prepared for recurring shirt orders
-              and seasonal drops.
+              Structured production lines prepared for recurring shirt orders,
+              seasonal programs, and repeat manufacturing.
             </span>
           </div>
           <div>
-            <strong>Logistics</strong>
+            <strong>Packing Readiness</strong>
             <span>
-              Export-ready dispatch to EU, UK, Dubai, and North America with
-              packing discipline built in.
+              Orders are prepared with organized finishing, folding, and packing
+              standards for shipment coordination by the client or logistics
+              partner.
             </span>
           </div>
         </div>
       </section>
 
       <section className="principles-section">
-        <h2>What keeps the factory floor reliable.</h2>
+        <h2>What makes our production reliable.</h2>
         <div className="principles-grid">
           <article className="principle-card">
             <div className="principle-icon" aria-hidden="true">
@@ -245,8 +244,8 @@ export default function ManufacturingPage() {
             </div>
             <h3>Consistency</h3>
             <p>
-              Repeatable results across first samples, bulk runs, and
-              replenishment orders.
+              Consistent results from sampling to bulk production and repeat
+              orders.
             </p>
           </article>
           <article className="principle-card">
@@ -261,8 +260,8 @@ export default function ManufacturingPage() {
             </div>
             <h3>Adaptability</h3>
             <p>
-              Programs can flex around fit, finish, branding, and
-              account-specific requirements.
+              Flexible production tailored to fit, finish, branding, and client
+              requirements.
             </p>
           </article>
           <article className="principle-card">
@@ -274,7 +273,7 @@ export default function ManufacturingPage() {
             </div>
             <h3>Traceability</h3>
             <p>
-              Clear oversight from sourcing and sampling to packing and outbound
+              Full visibility from sourcing and sampling to packing and
               shipment.
             </p>
           </article>
@@ -289,25 +288,25 @@ export default function ManufacturingPage() {
             </div>
             <h3>Continuity</h3>
             <p>
-              Stable line planning and long-term production support for repeat
-              accounts and seasonal calendars.
+              Stable production planning and long-term support for repeat orders
+              and seasonal collections.
             </p>
           </article>
         </div>
       </section>
 
       <section className="atelier-cta">
-        <h2>Plan your next production run with us.</h2>
+        <h2>Start Your Next Production with Us.</h2>
         <p>
-          Request a swatch book, discuss your development calendar, or book a
-          guided manufacturing introduction with our team.
+          Request a swatch kit, discuss your development timeline, or connect
+          with our team to start your production process.
         </p>
         <div className="atelier-cta-actions">
           <Link className="button" href="/contact">
             Request Swatch Kit
           </Link>
           <Link className="button button-ghost" href="/contact">
-            Consult a Specialist
+            Talk to a Specialist
           </Link>
         </div>
       </section>
@@ -315,48 +314,55 @@ export default function ManufacturingPage() {
       <section className="contact-banner" id="contact">
         <div className="contact-copy">
           <p className="eyebrow">Manufacturing Contact</p>
-          <h2>
-            Begin your
-            <em>production</em>
-            inquiry.
-          </h2>
+          <h2>Start Your Production Inquiry</h2>
           <p>
-            Reach our Istanbul office for development meetings, sourcing
-            conversations, or a guided manufacturing introduction.
+            Connect with our team to discuss your project, sourcing needs, and
+            production timeline.
           </p>
 
           <ul className="contact-list">
-            <li>Istanbul Manufacturing Base, Turkey</li>
-            <li>Appointments by confirmation</li>
+            <li>Istanbul Manufacturing Base - Turkey</li>
+            <li>Visits by Appointment</li>
           </ul>
         </div>
 
-        <form className="contact-form">
-          <h3>Inquiry Form</h3>
-          <label>
-            <span>Full Name</span>
-            <input type="text" name="name" placeholder="Enter your name" />
-          </label>
-          <label>
-            <span>Contact Number</span>
-            <input type="text" name="phone" placeholder="Your phone number" />
-          </label>
-          <label>
-            <span>Email</span>
-            <input type="email" name="email" placeholder="hello@example.com" />
-          </label>
-          <label>
-            <span>Request</span>
-            <textarea
-              name="message"
-              rows="4"
-              placeholder="Tell us about your project"
-            ></textarea>
-          </label>
-          <button className="button button-dark" type="submit">
-            Request Private Consultation
-          </button>
-        </form>
+        <MailtoContactForm
+          className="contact-form"
+          title="Project Inquiry"
+          subject="Manufacturing Inquiry"
+          buttonLabel="Request Consultation"
+          fields={[
+            {
+              label: "Full Name",
+              name: "name",
+              type: "text",
+              placeholder: "Enter your name",
+              required: true,
+            },
+            {
+              label: "Phone Number",
+              name: "phone",
+              type: "text",
+              placeholder: "Your phone number",
+            },
+            {
+              label: "Email Address",
+              name: "email",
+              type: "email",
+              placeholder: "hello@example.com",
+              required: true,
+            },
+            {
+              label: "Project Details",
+              name: "message",
+              type: "textarea",
+              rows: 4,
+              placeholder:
+                "Tell us about your collection, quantities, and timeline.",
+              required: true,
+            },
+          ]}
+        />
       </section>
 
       <footer className="site-footer">
@@ -378,8 +384,8 @@ export default function ManufacturingPage() {
           <div>
             <h3>Contact</h3>
             <a href="tel:+902122301316">+90 212 230 13 16</a>
-            <a href="mailto:tekstilyagmur@outlook.com">
-              tekstilyagmur@outlook.com
+            <a href="mailto:info@mayagmurtextile.com">
+              info@mayagmurtextile.com
             </a>
             <Link href="/contact">Appointments</Link>
           </div>

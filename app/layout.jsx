@@ -45,7 +45,7 @@ export default function RootLayout({ children }) {
     name: "MA Yagmur Textile",
     url: "https://www.mayagmurtextile.com",
     logo: "https://www.mayagmurtextile.com/assets/logo.png",
-    email: "mailto:tekstilyagmur@outlook.com",
+    email: "mailto:info@mayagmurtextile.com",
     telephone: "+90 212 230 13 16",
     sameAs: [],
   };
@@ -57,7 +57,7 @@ export default function RootLayout({ children }) {
     image: "https://www.mayagmurtextile.com/assets/logo.png",
     url: "https://www.mayagmurtextile.com",
     telephone: "+90 212 230 13 16",
-    email: "tekstilyagmur@outlook.com",
+    email: "info@mayagmurtextile.com",
     address: {
       "@type": "PostalAddress",
       streetAddress: "Caglayan Mahallesi, Park Sokak No:11/5, Ahmet Bilgin Is Hani Kat:5",

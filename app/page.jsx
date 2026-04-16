@@ -1,4 +1,5 @@
 import Link from "next/link";
+import MailtoContactForm from "../components/mailto-contact-form";
 
 export const metadata = {
   title: "Shirt Manufacturer in Istanbul",
@@ -26,20 +27,19 @@ export default function HomePage() {
     <main>
       <section className="hero" id="hero">
         <div className="hero-copy">
-          <p className="eyebrow">Istanbul based shirt manufacturer</p>
+          <p className="eyebrow">Istanbul-Based Private Label Shirt Manufacturer</p>
           <h1>
-            The Silent
-            <em>Precision</em>
-            <br/>
-            of Wool.
+            Trusted Shirt Manufacturing
+            <br />
+            for Growing Brands.
           </h1>
           <p className="lead">
-            MA Yagmur Textile develops private label shirt programs for global
-            brands, combining Istanbul workshop discipline with export-ready
-            manufacturing precision.
+            MA Yagmur Textile manufactures private label shirts for global
+            brands, combining Istanbul craftsmanship with export-ready
+            precision.
           </p>
           <Link className="button" href="/manufacturing">
-            Explore Manufacturing
+            Discover Our Production Process
           </Link>
         </div>
 
@@ -47,13 +47,13 @@ export default function HomePage() {
           <div className="portrait-card portrait-card-large">
             <img
               src="/assets/hero-banner.png"
-              alt="Editorial tailoring portrait"
+              alt="MA Yagmur Textile shirt production detail"
             />
           </div>
           <div className="signature-card">
-            <span className="signature-label">Design Note</span>
-            <strong>No. 7914</strong>
-            <span>MA Yagmur Textile</span>
+            <span className="signature-label">Production Focus</span>
+            <strong>Private Label Manufacturing</strong>
+            <span>From Sampling to Bulk Production</span>
           </div>
         </div>
       </section>
@@ -64,7 +64,7 @@ export default function HomePage() {
             <img src="/assets/kumas-turu.png" alt="Fabric swatch selection" />
           </div>
           <div className="small-card">
-            <img src="/assets/heritage.jpg" alt="Heritage atelier detail" />
+            <img src="/assets/heritage.jpg" alt="Textile workshop production detail" />
           </div>
         </div>
 
@@ -72,24 +72,23 @@ export default function HomePage() {
           <p className="eyebrow">Manufacturer Profile</p>
           <h2>Anatolian Soul, Italian Precision.</h2>
           <p>
-            We operate as a shirt manufacturer for brands seeking private label
-            development, dependable production quality, and long-term wholesale
-            support.
+            We manufacture shirts for brands seeking reliable private label
+            production, consistent quality, and long-term partnerships.
           </p>
           <p>
-            Our strength lies in translating material knowledge, workshop care,
-            and production structure into commercial collections ready for
-            sampling, bulk production, and export.
+            Our strength lies in combining fabric expertise, craftsmanship, and
+            structured production into collections ready for sampling, bulk
+            manufacturing, and export.
           </p>
 
           <div className="stats">
             <div>
-              <strong>24</strong>
-              <span>years of legacy</span>
+              <strong>20</strong>
+              <span>Years of Experience</span>
             </div>
             <div>
               <strong>100%</strong>
-              <span>crafted in-house</span>
+              <span>Fully Crafted In-House</span>
             </div>
           </div>
         </div>
@@ -112,54 +111,54 @@ export default function HomePage() {
       <section className="collection" id="collection">
         <div className="section-heading">
           <div>
-            <p className="eyebrow">Capsule Feature</p>
-            <h2>The Modern Iconoclast</h2>
+            <p className="eyebrow">Production Programs</p>
+            <h2>Core Product Categories</h2>
           </div>
-          <Link href="/collection">View Full Lookbook</Link>
+          <Link href="/collection">Explore Product Programs</Link>
         </div>
 
         <div className="collection-grid">
           <article className="product-card product-card-tall product-card-hover-color">
             <img
               src="/assets/iconlast-1.jpg"
-              alt="Bombazine overcoat editorial look"
+              alt="Formal shirt manufacturing sample"
             />
             <div className="product-meta">
-              <h3>Bombazine Overcoat</h3>
-              <p>100% wool, hand-finished cashmere</p>
+              <h3>Striped Dress Shirt</h3>
+              <p>Classic long-sleeve shirting for private label formal and business collections.</p>
             </div>
           </article>
 
           <article className="product-card product-card-offset product-card-hover-color">
             <img
               src="/assets/iconlast-2.png"
-              alt="Atelier waistcoat editorial look"
+              alt="Casual shirt production sample"
             />
             <div className="product-meta">
-              <h3>Atelier Waistcoat</h3>
-              <p>Wool silk waistcoat</p>
+              <h3>Overshirt Program</h3>
+              <p>Structured overshirts with utility pockets for premium casual and layered collections.</p>
             </div>
           </article>
 
           <article className="product-card product-card-hover-color">
             <img
               src="/assets/iconlast-4.png"
-              alt="Heritage oxfords editorial detail"
+              alt="Uniform shirt production detail"
             />
             <div className="product-meta">
-              <h3>Heritage Oxfords</h3>
-              <p>Hand-polished calfskin</p>
+              <h3>Linen Utility Shirt</h3>
+              <p>Breathable natural-fiber styles suited to summer programs and resort-focused ranges.</p>
             </div>
           </article>
 
           <article className="product-card product-card-wide product-card-hover-color">
             <img
               src="/assets/iconlast-5.png"
-              alt="Foundation trouser editorial detail"
+              alt="Seasonal shirt collection detail"
             />
             <div className="product-meta">
-              <h3>Foundation Trouser</h3>
-              <p>Fine drape wool blend</p>
+              <h3>Short-Sleeve Zip Shirt</h3>
+              <p>Modern short-sleeve styles developed for fashion-forward seasonal and capsule collections.</p>
             </div>
           </article>
         </div>
@@ -167,50 +166,62 @@ export default function HomePage() {
 
       <section className="contact-banner" id="contact">
         <div className="contact-copy">
-          <p className="eyebrow">Private Commission</p>
+          <p className="eyebrow">Production Inquiry</p>
           <h2>
-            Begin your
-            <em>Private</em>
-            Commission
+            Start your
+            <em>Production</em>
+            Inquiry
           </h2>
           <p>
-            Step into MA Yagmur Textile. Tailored creative by invitation or
-            private application. Each bespoke decision is an architectural
-            masterpiece for the individual.
+            Tell us about your brand, product type, target quantity, and timing.
+            We will guide you through sampling, production planning, and the
+            right manufacturing route for your collection.
           </p>
 
           <ul className="contact-list">
-            <li>Bespoke Atelier, Istanbul</li>
-            <li>Available for commission, trunk shows</li>
+            <li>Private label and contract manufacturing</li>
+            <li>Sampling, bulk production, and export support</li>
           </ul>
         </div>
 
-        <form className="contact-form">
-          <h3>Inquiry for Bespoke</h3>
-          <label>
-            <span>Full Name</span>
-            <input type="text" name="name" placeholder="Enter your name" />
-          </label>
-          <label>
-            <span>Contact Number</span>
-            <input type="text" name="company" placeholder="Your phone number" />
-          </label>
-          <label>
-            <span>Email</span>
-            <input type="email" name="email" placeholder="hello@example.com" />
-          </label>
-          <label>
-            <span>Preferred Date</span>
-            <textarea
-              name="message"
-              rows="4"
-              placeholder="Your preferred appointment date"
-            ></textarea>
-          </label>
-          <button className="button button-dark" type="submit">
-            Request Private Consultation
-          </button>
-        </form>
+        <MailtoContactForm
+          className="contact-form"
+          title="Production Inquiry"
+          subject="Production Inquiry"
+          buttonLabel="Request Production Quote"
+          fields={[
+            {
+              label: "Full Name",
+              name: "name",
+              type: "text",
+              placeholder: "Enter your name",
+              required: true,
+            },
+            {
+              label: "Brand / Company",
+              name: "company",
+              type: "text",
+              placeholder: "Your brand or company name",
+              required: true,
+            },
+            {
+              label: "Email",
+              name: "email",
+              type: "email",
+              placeholder: "hello@example.com",
+              required: true,
+            },
+            {
+              label: "Project Brief",
+              name: "message",
+              type: "textarea",
+              rows: 4,
+              placeholder:
+                "Tell us the product type, estimated quantity, and target delivery window",
+              required: true,
+            },
+          ]}
+        />
       </section>
 
       <footer className="site-footer">
@@ -219,7 +230,7 @@ export default function HomePage() {
             <span>MA Yagmur</span>
             <span>Textile</span>
           </Link>
-          <p>An inquiry in modern bespoke and conscious craft.</p>
+          <p>Private label shirt manufacturing and textile production support from Istanbul.</p>
         </div>
 
         <div className="footer-columns">
@@ -232,14 +243,14 @@ export default function HomePage() {
           <div>
             <h3>Contact</h3>
             <a href="tel:+902122301316">+90 212 230 13 16</a>
-            <a href="mailto:tekstilyagmur@outlook.com">
-              tekstilyagmur@outlook.com
+            <a href="mailto:info@mayagmurtextile.com">
+              info@mayagmurtextile.com
             </a>
-            <Link href="/contact">Trunk Shows</Link>
+            <Link href="/contact">Production Inquiry</Link>
           </div>
           <div>
-            <h3>Newsletter</h3>
-            <p>Get the latest editorial letters and atelier notes.</p>
+            <h3>Capabilities</h3>
+            <p>Sampling, private label development, bulk production, and export support.</p>
           </div>
         </div>
       </footer>

@@ -1,23 +1,24 @@
 import Link from "next/link";
+import MailtoContactForm from "../../components/mailto-contact-form";
 
 export const metadata = {
   title: "Contact",
   description:
-    "Contact MA Yagmur Textile for wholesale inquiries, private label shirt development, manufacturing planning, and textile production partnerships.",
+    "Contact MA Yagmur Textile for private label shirt manufacturing, sampling, production planning, and project inquiries.",
   alternates: {
     canonical: "/contact",
   },
   openGraph: {
     title: "Contact | MA Yagmur Textile Istanbul",
     description:
-      "Reach MA Yagmur Textile for manufacturing inquiries, sampling discussions, and wholesale partnerships.",
+      "Reach MA Yagmur Textile for production inquiries, sampling discussions, and private label shirt manufacturing.",
     url: "/contact",
     type: "website",
   },
   twitter: {
     title: "Contact | MA Yagmur Textile Istanbul",
     description:
-      "Reach MA Yagmur Textile for manufacturing inquiries, sampling discussions, and wholesale partnerships.",
+      "Reach MA Yagmur Textile for production inquiries, sampling discussions, and private label shirt manufacturing.",
   },
 };
 
@@ -51,15 +52,15 @@ export default function ContactPage() {
       />
       <section className="contact-page-hero">
         <div className="contact-page-copy">
-          <p className="eyebrow">Inquiries &amp; Partnerships</p>
+          <p className="eyebrow">Production Contact</p>
           <h1>
-            Let us weave
-            your vision
-            into reality.
+            Start your next
+            production
+            conversation.
           </h1>
           <p className="lead">
-            Reach us for wholesale inquiries, private label development,
-            sampling discussions, and export-ready production planning.
+            Connect with our team for private label shirt manufacturing,
+            sampling, material discussions, and production planning.
           </p>
         </div>
 
@@ -67,9 +68,9 @@ export default function ContactPage() {
           <div className="contact-scene">
             <div className="contact-scene-lamp"></div>
             <div className="contact-scene-copy">
-              <strong>Premium Textile</strong>
-              <strong>Textile Workshop</strong>
-              <span>Made for modern labels</span>
+              <strong>Private Label</strong>
+              <strong>Shirt Manufacturing</strong>
+              <span>Built for growing brands</span>
             </div>
             <div className="contact-scene-objects">
               <span className="scene-block scene-block-small"></span>
@@ -84,48 +85,68 @@ export default function ContactPage() {
       <section className="contact-page-main">
         <div className="contact-form-shell">
           <div className="contact-form-heading">
-            <h2>General &amp; Wholesale Inquiries</h2>
+            <h2>Project Inquiry</h2>
           </div>
 
-          <form className="contact-page-form">
-            <div className="contact-page-form-grid">
-              <label>
-                <span>Full Name</span>
-                <input type="text" name="name" placeholder="Alexander Vane" />
-              </label>
-              <label>
-                <span>Email Address</span>
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="contact@sartorial.com"
-                />
-              </label>
-            </div>
-
-            <label>
-              <span>Inquiry Type</span>
-              <select name="inquiry_type" defaultValue="General Inquiry">
-                <option>General Inquiry</option>
-                <option>Private Label Development</option>
-                <option>Wholesale Partnership</option>
-                <option>Sampling Request</option>
-              </select>
-            </label>
-
-            <label>
-              <span>Your Message</span>
-              <textarea
-                name="message"
-                rows="6"
-                placeholder="Describe your project or requirements..."
-              ></textarea>
-            </label>
-
-            <button className="button" type="submit">
-              Send Inquiry
-            </button>
-          </form>
+          <MailtoContactForm
+            className="contact-page-form"
+            groupedFieldCount={2}
+            groupClassName="contact-page-form-grid"
+            subject="Project Inquiry"
+            buttonLabel="Send Inquiry"
+            buttonClassName="button"
+            fields={[
+              {
+                label: "Full Name",
+                name: "name",
+                type: "text",
+                placeholder: "Enter your name",
+                required: true,
+              },
+              {
+                label: "Brand / Company",
+                name: "company",
+                type: "text",
+                placeholder: "Your brand or company name",
+                required: true,
+              },
+              {
+                label: "Phone Number",
+                name: "phone",
+                type: "text",
+                placeholder: "Your phone number",
+              },
+              {
+                label: "Email Address",
+                name: "email",
+                type: "email",
+                placeholder: "hello@example.com",
+                required: true,
+              },
+              {
+                label: "Inquiry Type",
+                name: "inquiry_type",
+                type: "select",
+                options: [
+                  "Private Label Production",
+                  "Sampling Request",
+                  "Material Development",
+                  "Bulk Order",
+                ],
+                defaultValue: "Private Label Production",
+                required: true,
+              },
+              {
+                label: "Project Details",
+                name: "message",
+                type: "textarea",
+                rows: 6,
+                placeholder:
+                  "Tell us about your collection, quantities, materials, and timeline.",
+                required: true,
+              },
+            ]}
+          />
         </div>
 
         <aside className="contact-page-sidebar">
@@ -135,28 +156,29 @@ export default function ContactPage() {
             <p>Ahmet Bilgin Is Hani Kat: 5</p>
             <p>Istanbul, Turkiye</p>
             <a href="tel:+902122301316">+90 212 230 13 16</a>
-            <a href="mailto:tekstilyagmur@outlook.com">
-              tekstilyagmur@outlook.com
+            <a href="mailto:info@mayagmurtextile.com">
+              info@mayagmurtextile.com
             </a>
           </article>
 
           <article className="contact-detail-card">
             <h3>The Workshop &amp; Factory</h3>
-            <p>Organize Sanayi Bolgesi, 4. Cadde No: 88</p>
-            <p>Esenyurt, Istanbul, Turkiye</p>
-            <p className="contact-small-note">Site visits by appointment only.</p>
+            <p>Caglayan Mahallesi, Park Sokak No: 11/5</p>
+            <p>Ahmet Bilgin Is Hani Kat: 4</p>
+            <p>Istanbul, Turkiye</p>
+            <p className="contact-small-note">Visits by appointment only.</p>
           </article>
 
           <article className="contact-detail-card">
-            <h3>Global Sales</h3>
+            <h3>Production Support</h3>
             <div className="contact-sales-grid">
               <div>
-                <span>London Office</span>
-                <p>Savile Row, W1S 3PR</p>
+                <span>Sampling</span>
+                <p>Development, fitting, and approval support for new collections.</p>
               </div>
               <div>
-                <span>Milan Showroom</span>
-                <p>Via Montenapoleone, 20121</p>
+                <span>Production Planning</span>
+                <p>Structured coordination for quantities, timelines, and repeat orders.</p>
               </div>
             </div>
           </article>
@@ -188,8 +210,8 @@ export default function ContactPage() {
             <span>Textile</span>
           </Link>
           <p>
-            Crafting excellence in every thread. Turkiye&apos;s premier textile
-            destination for global luxury brands.
+            Private label shirt manufacturing support for brands seeking
+            reliable production from Istanbul.
           </p>
         </div>
 
@@ -201,13 +223,15 @@ export default function ContactPage() {
             <Link href="/collection">Collection</Link>
           </div>
           <div>
-            <h3>Business</h3>
-            <Link href="/contact">Press Kit</Link>
-            <Link href="/contact">Wholesale Portal</Link>
+            <h3>Contact</h3>
+            <a href="tel:+902122301316">+90 212 230 13 16</a>
+            <a href="mailto:info@mayagmurtextile.com">
+              info@mayagmurtextile.com
+            </a>
           </div>
           <div>
-            <h3>Newsletter</h3>
-            <p>Get the latest production notes and collection updates.</p>
+            <h3>Capabilities</h3>
+            <p>Sampling, private label development, bulk production, and packing readiness.</p>
           </div>
         </div>
       </footer>

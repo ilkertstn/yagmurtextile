@@ -1,4 +1,5 @@
 import Link from "next/link";
+import MailtoContactForm from "../../components/mailto-contact-form";
 
 export const metadata = {
   title: "Collection",
@@ -358,32 +359,43 @@ export default function CollectionPage() {
           </ul>
         </div>
 
-        <form className="contact-form">
-          <h3>Production Inquiry</h3>
-          <label>
-            <span>Full Name</span>
-            <input type="text" name="name" placeholder="Enter your name" />
-          </label>
-          <label>
-            <span>Brand / Company</span>
-            <input type="text" name="company" placeholder="Your company name" />
-          </label>
-          <label>
-            <span>Email</span>
-            <input type="email" name="email" placeholder="hello@example.com" />
-          </label>
-          <label>
-            <span>Project Brief</span>
-            <textarea
-              name="message"
-              rows="4"
-              placeholder="Tell us the product family, estimated quantity, and target delivery window"
-            ></textarea>
-          </label>
-          <button className="button button-dark" type="submit">
-            Request Product Consultation
-          </button>
-        </form>
+        <MailtoContactForm
+          className="contact-form"
+          title="Production Inquiry"
+          subject="Product Consultation Inquiry"
+          buttonLabel="Request Product Consultation"
+          fields={[
+            {
+              label: "Full Name",
+              name: "name",
+              type: "text",
+              placeholder: "Enter your name",
+              required: true,
+            },
+            {
+              label: "Brand / Company",
+              name: "company",
+              type: "text",
+              placeholder: "Your company name",
+            },
+            {
+              label: "Email",
+              name: "email",
+              type: "email",
+              placeholder: "hello@example.com",
+              required: true,
+            },
+            {
+              label: "Project Brief",
+              name: "message",
+              type: "textarea",
+              rows: 4,
+              placeholder:
+                "Tell us the product family, estimated quantity, and target delivery window",
+              required: true,
+            },
+          ]}
+        />
       </section>
 
       <footer className="site-footer">
@@ -405,8 +417,8 @@ export default function CollectionPage() {
           <div>
             <h3>Contact</h3>
             <a href="tel:+902122301316">+90 212 230 13 16</a>
-            <a href="mailto:tekstilyagmur@outlook.com">
-              tekstilyagmur@outlook.com
+            <a href="mailto:info@mayagmurtextile.com">
+              info@mayagmurtextile.com
             </a>
             <Link href="/contact">Product Inquiry</Link>
           </div>

@@ -518,6 +518,26 @@ textarea {
   border-color: var(--accent);
 }
 
+.contact-page-form button:disabled,
+.contact-form button:disabled {
+  cursor: wait;
+  opacity: 0.72;
+}
+
+.form-status {
+  margin: 4px 0 0;
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
+.form-status.is-success {
+  color: #2d6a4f;
+}
+
+.form-status.is-error {
+  color: #a63c2f;
+}
+
 .contact-page-sidebar {
   display: grid;
   gap: 26px;
@@ -1612,7 +1632,7 @@ textarea {
 }
 
 .product-card-hover-color img {
-  filter: grayscale(1);
+  filter: saturate(0.98) contrast(0.99);
   transition:
     filter 280ms ease,
     transform 280ms ease;
@@ -1620,8 +1640,8 @@ textarea {
 
 .product-card-hover-color:hover img,
 .product-card-hover-color:focus-within img {
-  filter: grayscale(0);
-  transform: translateY(-2px);
+  filter: saturate(1) contrast(1.01);
+  transform: translateY(-1px);
 }
 
 .product-card-tall {
