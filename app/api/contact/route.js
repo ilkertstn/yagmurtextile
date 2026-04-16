@@ -1,6 +1,8 @@
 import nodemailer from "nodemailer";
 
 const contactRecipient = process.env.CONTACT_FORM_TO || "info@mayagmurtextile.com";
+const smtpConfigError =
+  "Mail service is not configured right now. Please try again later or email info@mayagmurtextile.com.";
 
 function getTransporter() {
   const host = process.env.SMTP_HOST;
@@ -9,7 +11,11 @@ function getTransporter() {
   const pass = process.env.SMTP_PASS;
 
   if (!host || !user || !pass) {
-    throw new Error("SMTP settings are missing. Please configure SMTP_HOST, SMTP_PORT, SMTP_USER, and SMTP_PASS.");
+    const error = new Error(
+      "SMTP settings are missing. Please configure SMTP_HOST, SMTP_PORT, SMTP_USER, and SMTP_PASS.",
+    );
+    error.code = "SMTP_MISSING_CONFIG";
+    throw error;
   }
 
   return nodemailer.createTransport({
@@ -53,11 +59,17 @@ export async function POST(request) {
 
     return Response.json({ ok: true });
   } catch (error) {
+    if (error.code === "SMTP_MISSING_CONFIG") {
+      console.error("Contact form SMTP configuration is incomplete.");
+    } else {
+      console.error("Contact form submission failed:", error);
+    }
+
     return Response.json(
       {
-        error: error.message || "Unable to send inquiry.",
+        error: error.code === "SMTP_MISSING_CONFIG" ? smtpConfigError : "Unable to send inquiry.",
       },
-      { status: 500 },
+      { status: error.code === "SMTP_MISSING_CONFIG" ? 503 : 500 },
     );
   }
 }
