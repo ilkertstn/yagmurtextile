@@ -5,15 +5,27 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const navItems = [
-  { href: "/", label: "Home" },
-  { href: "/manufacturing", label: "Manufacturing" },
-  { href: "/collection", label: "Collection" },
-  { href: "/contact", label: "Contact" },
+  { href: "/", label: "Home", labelTr: "Ana Sayfa" },
+  { href: "/manufacturing", label: "Manufacturing", labelTr: "Üretim" },
+  { href: "/collection", label: "Collection", labelTr: "Koleksiyon" },
+  { href: "/contact", label: "Contact", labelTr: "İletişim" },
 ];
 
 export default function SiteHeader() {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const isTurkish = pathname === "/tr" || pathname.startsWith("/tr/");
+
+  const localizedPath = (href) => {
+    if (!isTurkish) {
+      return href;
+    }
+
+    return href === "/" ? "/tr" : `/tr${href}`;
+  };
+
+  const englishPath = isTurkish ? pathname.replace(/^\/tr/, "") || "/" : pathname;
+  const turkishPath = isTurkish ? pathname : pathname === "/" ? "/tr" : `/tr${pathname}`;
 
   useEffect(() => {
     setIsMenuOpen(false);
@@ -21,8 +33,16 @@ export default function SiteHeader() {
 
   return (
     <header className="site-header">
-      <Link className="brand" href="/" aria-label="MA Yagmur Textile homepage">
-        <img src="/assets/logo-cropped.png" alt="MA Yagmur Textile" />
+      <Link
+        className="brand"
+        href={isTurkish ? "/tr" : "/"}
+        aria-label="MA Yagmur Textile homepage"
+      >
+        <img
+          className={isTurkish ? "brand-logo-tr" : undefined}
+          src={isTurkish ? "/assets/logo-turkce-cropped.png" : "/assets/logo-cropped.png"}
+          alt={isTurkish ? "MA Yağmur Tekstil" : "MA Yagmur Textile"}
+        />
       </Link>
 
       <nav
@@ -31,20 +51,30 @@ export default function SiteHeader() {
         id="site-menu"
       >
         {navItems.map((item) => {
+          const href = localizedPath(item.href);
           const isActive =
-            item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
+            href === "/" || href === "/tr" ? pathname === href : pathname.startsWith(href);
 
           return (
             <Link
               key={item.href}
-              href={item.href}
+              href={href}
               aria-current={isActive ? "page" : undefined}
             >
-              {item.label}
+              {isTurkish ? item.labelTr : item.label}
             </Link>
           );
         })}
       </nav>
+
+      <div className="language-switcher" aria-label="Language selection">
+        <Link href={englishPath} aria-current={!isTurkish ? "true" : undefined}>
+          EN
+        </Link>
+        <Link href={turkishPath} aria-current={isTurkish ? "true" : undefined}>
+          TR
+        </Link>
+      </div>
 
       <button
         className={`nav-button ${isMenuOpen ? "is-open" : ""}`}

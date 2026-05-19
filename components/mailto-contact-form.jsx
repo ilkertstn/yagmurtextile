@@ -11,9 +11,22 @@ export default function MailtoContactForm({
   groupedFieldCount = 0,
   groupClassName,
   subject = "Website Inquiry",
+  language = "en",
 }) {
   const [status, setStatus] = useState("idle");
   const [message, setMessage] = useState("");
+  const copy =
+    language === "tr"
+      ? {
+          sending: "Gönderiliyor...",
+          success: "Talebiniz başarıyla gönderildi.",
+          error: "Talebiniz şu anda gönderilemiyor.",
+        }
+      : {
+          sending: "Sending...",
+          success: "Your inquiry has been sent successfully.",
+          error: "Unable to send your inquiry right now.",
+        };
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -44,15 +57,15 @@ export default function MailtoContactForm({
       const result = await response.json();
 
       if (!response.ok) {
-        throw new Error(result.error || "Unable to send your inquiry right now.");
+        throw new Error(result.error || copy.error);
       }
 
       setStatus("success");
-      setMessage("Your inquiry has been sent successfully.");
+      setMessage(copy.success);
       form.reset();
     } catch (error) {
       setStatus("error");
-      setMessage(error.message || "Unable to send your inquiry right now.");
+      setMessage(language === "tr" ? copy.error : error.message || copy.error);
     }
   }
 
@@ -70,7 +83,7 @@ export default function MailtoContactForm({
         <FormField key={field.name} field={field} disabled={status === "submitting"} />
       ))}
       <button className={buttonClassName} type="submit" disabled={status === "submitting"}>
-        {status === "submitting" ? "Sending..." : buttonLabel}
+        {status === "submitting" ? copy.sending : buttonLabel}
       </button>
       {message ? (
         <p

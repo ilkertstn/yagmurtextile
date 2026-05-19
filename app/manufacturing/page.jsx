@@ -383,7 +383,7 @@ export default function ManufacturingPage() {
           </div>
           <div>
             <h3>Contact</h3>
-            <a href="tel:+902122301316">+90 212 230 13 16</a>
+            <a href="tel:+902122301316">+90 530 780 24 26</a>
             <a href="mailto:info@mayagmurtextile.com">
               info@mayagmurtextile.com
             </a>

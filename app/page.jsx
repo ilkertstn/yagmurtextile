@@ -31,7 +31,7 @@ export default function HomePage() {
           <h1>
             Trusted Shirt Manufacturing
             <br />
-            for Growing Brands.
+            for Ambitious Brands.
           </h1>
           <p className="lead">
             MA Yagmur Textile manufactures private label shirts for global
@@ -55,6 +55,53 @@ export default function HomePage() {
             <strong>Private Label Manufacturing</strong>
             <span>From Sampling to Bulk Production</span>
           </div>
+        </div>
+      </section>
+
+      <section className="production-snapshot" aria-labelledby="production-snapshot-title">
+        <div className="snapshot-heading">
+          <p className="eyebrow">Production At A Glance</p>
+          <h2 id="production-snapshot-title">
+            Essential manufacturing details for private label shirt programs.
+          </h2>
+        </div>
+
+        <div className="snapshot-grid">
+          <article className="snapshot-card">
+            <span>01</span>
+            <h3>Men's & Women's Shirts</h3>
+            <p>
+              Private label shirt production focused on men's and women's woven
+              shirt collections.
+            </p>
+          </article>
+
+          <article className="snapshot-card">
+            <span>02</span>
+            <h3>MOQ 600-700 pcs/color</h3>
+            <p>
+              Minimum production planning starts around 600-700 pieces per
+              color, depending on fabric and style details.
+            </p>
+          </article>
+
+          <article className="snapshot-card">
+            <span>03</span>
+            <h3>1,100 Shirts Per Day</h3>
+            <p>
+              Daily production capacity supports approximately 1,100 shirts for
+              organized private label programs.
+            </p>
+          </article>
+
+          <article className="snapshot-card">
+            <span>04</span>
+            <h3>Sampling To Bulk</h3>
+            <p>
+              Prototype, fit sample, pre-production approval, bulk
+              manufacturing, final inspection, and export-ready packing.
+            </p>
+          </article>
         </div>
       </section>
 
@@ -242,7 +289,7 @@ export default function HomePage() {
           </div>
           <div>
             <h3>Contact</h3>
-            <a href="tel:+902122301316">+90 212 230 13 16</a>
+            <a href="tel:+902122301316">+90 530 780 24 26</a>
             <a href="mailto:info@mayagmurtextile.com">
               info@mayagmurtextile.com
             </a>

@@ -70,7 +70,7 @@ export default function ContactPage() {
             <div className="contact-scene-copy">
               <strong>Private Label</strong>
               <strong>Shirt Manufacturing</strong>
-              <span>Built for growing brands</span>
+              <span>Built for ambitious brands</span>
             </div>
             <div className="contact-scene-objects">
               <span className="scene-block scene-block-small"></span>
@@ -155,7 +155,7 @@ export default function ContactPage() {
             <p>Caglayan Mahallesi, Park Sokak No: 11/5</p>
             <p>Ahmet Bilgin Is Hani Kat: 5</p>
             <p>Istanbul, Turkiye</p>
-            <a href="tel:+902122301316">+90 212 230 13 16</a>
+            <a href="tel:+902122301316">+90 530 780 24 26</a>
             <a href="mailto:info@mayagmurtextile.com">
               info@mayagmurtextile.com
             </a>
@@ -183,11 +183,7 @@ export default function ContactPage() {
             </div>
           </article>
 
-          <div className="contact-socials">
-            <a href="#">Instagram</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">Pinterest</a>
-          </div>
+      
         </aside>
       </section>
 
@@ -224,7 +220,7 @@ export default function ContactPage() {
           </div>
           <div>
             <h3>Contact</h3>
-            <a href="tel:+902122301316">+90 212 230 13 16</a>
+            <a href="tel:+902122301316">+90 530 780 24 26</a>
             <a href="mailto:info@mayagmurtextile.com">
               info@mayagmurtextile.com
             </a>

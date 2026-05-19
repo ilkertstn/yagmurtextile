@@ -46,7 +46,7 @@ export default function RootLayout({ children }) {
     url: "https://www.mayagmurtextile.com",
     logo: "https://www.mayagmurtextile.com/assets/logo.png",
     email: "mailto:info@mayagmurtextile.com",
-    telephone: "+90 212 230 13 16",
+    telephone: "+90 530 780 24 26",
     sameAs: [],
   };
 
@@ -56,7 +56,7 @@ export default function RootLayout({ children }) {
     name: "MA Yagmur Textile",
     image: "https://www.mayagmurtextile.com/assets/logo.png",
     url: "https://www.mayagmurtextile.com",
-    telephone: "+90 212 230 13 16",
+    telephone: "+90 530 780 24 26",
     email: "info@mayagmurtextile.com",
     address: {
       "@type": "PostalAddress",

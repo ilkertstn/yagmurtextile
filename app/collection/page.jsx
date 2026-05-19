@@ -1,5 +1,6 @@
 import Link from "next/link";
 import MailtoContactForm from "../../components/mailto-contact-form";
+import ProductImageToggle from "../../components/product-image-toggle";
 
 export const metadata = {
   title: "Collection",
@@ -113,39 +114,38 @@ export default function CollectionPage() {
       <section className="program-grid">
         <article className="program-card program-card-featured">
           <div className="program-card-media">
-            <video
-              src="/assets/atelier/WhatsApp Video 2026-04-11 at 00.08.58.mp4"
-              autoPlay
-              muted
-              loop
-              playsInline
-              aria-label="Formal shirt program process"
-            ></video>
+            <ProductImageToggle
+              primarySrc="/assets/products/shirts-2.png"
+              primaryAlt="Classic formal shirt product sample"
+              secondarySrc="/assets/products/shirts-2-close.png"
+              secondaryAlt="Classic formal shirt close-up detail"
+            />
           </div>
           <div className="program-card-copy">
             <p className="eyebrow">Program 01</p>
-            <h3>Formal Shirting</h3>
+            <h3>Classic Formal Shirt</h3>
             <p>
-              Crisp poplin, satin-touch finishes, and clean tailoring details
-              developed for elevated dress shirt collections and ceremony-led
-              programs.
+              A long-sleeve formal shirt program developed with fine striped
+              poplin fabric, a clean collar shape, and precise button-front
+              construction for business, tailoring, and premium private label
+              collections.
             </p>
             <dl className="program-specs">
               <div>
                 <dt>Fabric Base</dt>
-                <dd>Poplin, pinpoint, stretch cotton</dd>
+                <dd>Poplin, pinpoint, cotton blend fabrics</dd>
               </div>
               <div>
                 <dt>Fit Options</dt>
-                <dd>Slim, regular, contemporary</dd>
+                <dd>Slim, regular, modern fit</dd>
               </div>
               <div>
                 <dt>MOQ</dt>
-                <dd>300 pcs per color</dd>
+                <dd>600-700 pcs per color</dd>
               </div>
               <div>
-                <dt>Lead Time</dt>
-                <dd>6 to 8 weeks</dd>
+                <dt>Product</dt>
+                <dd>Men's and women's formal shirt collections</dd>
               </div>
             </dl>
           </div>
@@ -153,34 +153,37 @@ export default function CollectionPage() {
 
         <article className="program-card">
           <div className="program-card-media">
-            <img
-              src="/assets/heritage.jpg"
-              alt="Casual shirting construction detail"
+            <ProductImageToggle
+              primarySrc="/assets/products/shirts-3.png"
+              primaryAlt="Casual shirt product sample"
+              secondarySrc="/assets/products/shirts-3-close.png"
+              secondaryAlt="Casual shirt close-up detail"
             />
           </div>
           <div className="program-card-copy">
             <p className="eyebrow">Program 02</p>
-            <h3>Casual Shirts</h3>
+            <h3>Casual Overshirt</h3>
             <p>
-              Relaxed silhouettes, washed surfaces, and easier structure for
-              off-duty collections that still require disciplined finishing.
+              Overshirt production developed with softly textured fabrics, a
+              relaxed silhouette, and utility details for modern casual and
+              off-duty collections.
             </p>
             <dl className="program-specs">
               <div>
                 <dt>Fabric Base</dt>
-                <dd>Oxford, twill, brushed cotton</dd>
+                <dd>Oxford, twill, brushed cotton fabrics</dd>
               </div>
               <div>
                 <dt>Detailing</dt>
-                <dd>Button-down collars, utility pockets</dd>
+                <dd>Utility pockets, button-down and open collar options</dd>
               </div>
               <div>
                 <dt>MOQ</dt>
-                <dd>250 pcs per style</dd>
+                <dd>250 pcs per model</dd>
               </div>
               <div>
-                <dt>Lead Time</dt>
-                <dd>5 to 7 weeks</dd>
+                <dt>Product</dt>
+                <dd>Men's casual overshirt and contemporary outerwear collections</dd>
               </div>
             </dl>
           </div>
@@ -188,52 +191,58 @@ export default function CollectionPage() {
 
         <article className="program-card">
           <div className="program-card-media">
-            <video
-              src="/assets/atelier/WhatsApp Video 2026-04-11 at 00.09.14.mp4"
-              autoPlay
-              muted
-              loop
-              playsInline
-              aria-label="Resort and linen shirt handling"
-            ></video>
+            <ProductImageToggle
+              primarySrc="/assets/products/shirts-1.png"
+              primaryAlt="Tropical resort shirt product sample"
+              secondarySrc="/assets/products/shirts-1-close.png"
+              secondaryAlt="Tropical resort shirt close-up detail"
+            />
           </div>
           <div className="program-card-copy">
             <p className="eyebrow">Program 03</p>
-            <h3>Linen &amp; Summer Weight</h3>
+            <h3>Tropical Resort Shirt</h3>
             <p>
-              Airy constructions and breathable blends for resort, summer, and
-              Mediterranean-ready collections with private label flexibility
-              built in.
+              A navy-ground tropical print shirt with natural motifs, lightly
+              textured fabric, and an easy summer silhouette for resort and
+              premium casual collections.
             </p>
             <dl className="program-specs">
               <div>
                 <dt>Fabric Base</dt>
-                <dd>Linen, linen-cotton, voile</dd>
+                <dd>Textured cotton / linen blend</dd>
               </div>
               <div>
-                <dt>Finishing</dt>
-                <dd>Garment wash, soft touch, enzyme</dd>
+                <dt>Fit Options</dt>
+                <dd>Relaxed, modern, resort fit</dd>
               </div>
               <div>
                 <dt>MOQ</dt>
-                <dd>200 pcs per style</dd>
+                <dd>300-500 pcs per print</dd>
               </div>
               <div>
-                <dt>Lead Time</dt>
-                <dd>4 to 6 weeks</dd>
+                <dt>Product</dt>
+                <dd>Men's resort and summer collection shirts</dd>
               </div>
             </dl>
           </div>
         </article>
 
-        <article className="program-card program-card-dark">
+        <article className="program-card program-card-featured program-card-dark program-card-fill-media">
+          <div className="program-card-media">
+            <ProductImageToggle
+              primarySrc="/assets/products/shirts-4.png"
+              primaryAlt="Corporate uniform shirt product sample"
+              secondarySrc="/assets/products/shirts-4-close.png"
+              secondaryAlt="Corporate uniform shirt close-up detail"
+            />
+          </div>
           <div className="program-card-copy">
             <p className="eyebrow">Program 04</p>
-            <h3>Corporate &amp; Uniform Shirts</h3>
+            <h3>Aviation &amp; Corporate Uniforms</h3>
             <p>
-              High-repeat production for hospitality, aviation, retail, and
-              officewear projects where consistency, continuity, and re-order
-              discipline matter most.
+              Uniform shirt solutions developed for aviation, hospitality, and
+              corporate wear programs that require long-term repeat production
+              and consistent quality standards.
             </p>
             <dl className="program-specs">
               <div>
@@ -242,15 +251,15 @@ export default function CollectionPage() {
               </div>
               <div>
                 <dt>Options</dt>
-                <dd>Logo embroidery, branded trims, packaging</dd>
+                <dd>Pilot epaulettes, logo embroidery, custom trims, corporate packaging</dd>
               </div>
               <div>
                 <dt>MOQ</dt>
-                <dd>500 pcs per style</dd>
+                <dd>500 pcs per model</dd>
               </div>
               <div>
-                <dt>Lead Time</dt>
-                <dd>6 to 10 weeks</dd>
+                <dt>Product</dt>
+                <dd>Pilot shirts, corporate uniform, and hospitality collections</dd>
               </div>
             </dl>
           </div>
@@ -416,7 +425,7 @@ export default function CollectionPage() {
           </div>
           <div>
             <h3>Contact</h3>
-            <a href="tel:+902122301316">+90 212 230 13 16</a>
+            <a href="tel:+902122301316">+90 530 780 24 26</a>
             <a href="mailto:info@mayagmurtextile.com">
               info@mayagmurtextile.com
             </a>
