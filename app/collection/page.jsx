@@ -72,17 +72,10 @@ export default function CollectionPage() {
 
         <div className="products-hero-media">
           <div className="products-hero-frame products-hero-frame-large">
-            <video
-              src="/assets/atelier/WhatsApp Video 2026-04-11 at 00.17.43.mp4"
-              autoPlay
-              muted
-              loop
-              playsInline
-              aria-label="Shirt manufacturing machinery detail"
-            ></video>
-          </div>
-          <div className="products-hero-frame products-hero-frame-small">
-            <img src="/assets/kumas-turu.png" alt="Shirting material selection" />
+            <img
+              src="/assets/showroom.png"
+              alt="Shirt collection displayed in the showroom"
+            />
           </div>
         </div>
       </section>
@@ -101,8 +94,8 @@ export default function CollectionPage() {
             <span>product families</span>
           </div>
           <div>
-            <strong>Low MOQ</strong>
-            <span>for sampling and launch runs</span>
+            <strong>50+</strong>
+            <span>minimum order; below 50 custom</span>
           </div>
           <div>
             <strong>Flexible</strong>
@@ -141,7 +134,7 @@ export default function CollectionPage() {
               </div>
               <div>
                 <dt>MOQ</dt>
-                <dd>600-700 pcs per color</dd>
+                <dd>50+ pcs</dd>
               </div>
               <div>
                 <dt>Product</dt>
@@ -179,7 +172,7 @@ export default function CollectionPage() {
               </div>
               <div>
                 <dt>MOQ</dt>
-                <dd>250 pcs per model</dd>
+                <dd>50+ pcs</dd>
               </div>
               <div>
                 <dt>Product</dt>
@@ -217,7 +210,7 @@ export default function CollectionPage() {
               </div>
               <div>
                 <dt>MOQ</dt>
-                <dd>300-500 pcs per print</dd>
+                <dd>50+ pcs</dd>
               </div>
               <div>
                 <dt>Product</dt>
@@ -255,7 +248,7 @@ export default function CollectionPage() {
               </div>
               <div>
                 <dt>MOQ</dt>
-                <dd>500 pcs per model</dd>
+                <dd>50+ pcs</dd>
               </div>
               <div>
                 <dt>Product</dt>

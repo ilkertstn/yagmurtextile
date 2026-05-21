@@ -342,11 +342,8 @@ textarea {
 }
 
 .contact-page-hero {
-  display: grid;
-  grid-template-columns: minmax(0, 0.95fr) minmax(360px, 0.95fr);
-  gap: 56px;
-  align-items: center;
-  padding: 30px 0 72px;
+  padding: 56px 0 72px;
+  text-align: center;
 }
 
 .contact-page-copy h1,
@@ -359,9 +356,16 @@ textarea {
 }
 
 .contact-page-copy h1 {
-  max-width: 9ch;
-  font-size: clamp(3.8rem, 7vw, 6.1rem);
-  line-height: 0.92;
+  max-width: 100%;
+  margin: 0 auto;
+  font-size: clamp(3.1rem, 5.2vw, 5.15rem);
+  line-height: 1;
+}
+
+.contact-page-copy .lead {
+  max-width: 58rem;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .contact-page-visual {
@@ -690,7 +694,7 @@ textarea {
 
 .products-hero-frame-large {
   position: absolute;
-  inset: 0 0 48px 56px;
+  inset: 0 0 0 56px;
 }
 
 .products-hero-frame-small {
@@ -2115,7 +2119,7 @@ textarea {
   }
 
   .products-hero-frame-large {
-    inset: 0 0 34px 34px;
+    inset: 0 0 0 34px;
   }
 
   .products-intro-stats,
@@ -2332,7 +2336,7 @@ textarea {
   }
 
   .products-hero-frame-large {
-    inset: 0 0 18px 18px;
+    inset: 0 0 0 18px;
   }
 
   .products-hero-frame-small {

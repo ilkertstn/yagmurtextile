@@ -39,8 +39,8 @@ export default function TurkishManufacturingPage() {
           <span>Günlük Gömlek Kapasitesi</span>
         </div>
         <div>
-          <strong>600-700</strong>
-          <span>Renk Başına Minimum Adet</span>
+          <strong>50+</strong>
+          <span>Minimum Sipariş / Altı Özel Üretim</span>
         </div>
         <div>
           <strong>20+</strong>

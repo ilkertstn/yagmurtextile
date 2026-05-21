@@ -65,10 +65,10 @@ export default function TurkishHomePage() {
 
           <article className="snapshot-card">
             <span>02</span>
-            <h3>MOQ 600-700 adet/renk</h3>
+            <h3>MOQ 50+ adet</h3>
             <p>
-              Minimum üretim planı kumaş ve model detaylarına göre renk başına
-              yaklaşık 600-700 adet seviyesinden başlar.
+              Minimum sipariş planı 50 adet ve üzeri için başlar. 50 adedin
+              altındaki talepler özel üretim kapsamında değerlendirilir.
             </p>
           </article>
 

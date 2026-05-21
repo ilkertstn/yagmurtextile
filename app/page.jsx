@@ -34,9 +34,7 @@ export default function HomePage() {
             for Ambitious Brands.
           </h1>
           <p className="lead">
-            MA Yagmur Textile manufactures private label shirts for global
-            brands, combining Istanbul craftsmanship with export-ready
-            precision.
+           MA Yağmur Textile combines modern production discipline with export-ready precision to deliver premium shirt manufacturing for global brands.
           </p>
           <Link className="button" href="/manufacturing">
             Discover Our Production Process
@@ -78,10 +76,10 @@ export default function HomePage() {
 
           <article className="snapshot-card">
             <span>02</span>
-            <h3>MOQ 600-700 pcs/color</h3>
+            <h3>MOQ 50+ pcs</h3>
             <p>
-              Minimum production planning starts around 600-700 pieces per
-              color, depending on fabric and style details.
+              Minimum order planning starts from 50 pieces. Orders below 50
+              pieces are handled as custom production.
             </p>
           </article>
 
@@ -117,7 +115,7 @@ export default function HomePage() {
 
         <div className="story-copy">
           <p className="eyebrow">Manufacturer Profile</p>
-          <h2>Anatolian Soul, Italian Precision.</h2>
+          <h2>Workshop Discipline, Export-Ready Production.</h2>
           <p>
             We manufacture shirts for brands seeking reliable private label
             production, consistent quality, and long-term partnerships.

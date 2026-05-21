@@ -35,17 +35,10 @@ export default function TurkishCollectionPage() {
 
         <div className="products-hero-media">
           <div className="products-hero-frame products-hero-frame-large">
-            <video
-              src="/assets/atelier/WhatsApp Video 2026-04-11 at 00.17.43.mp4"
-              autoPlay
-              muted
-              loop
-              playsInline
-              aria-label="Gömlek üretim makinesi detayı"
-            ></video>
-          </div>
-          <div className="products-hero-frame products-hero-frame-small">
-            <img src="/assets/kumas-turu.png" alt="Gömleklik kumaş seçimi" />
+            <img
+              src="/assets/showroom.png"
+              alt="Showroom'da sergilenen gömlek koleksiyonu"
+            />
           </div>
         </div>
       </section>
@@ -64,8 +57,8 @@ export default function TurkishCollectionPage() {
             <span>ürün ailesi</span>
           </div>
           <div>
-            <strong>600-700</strong>
-            <span>renk başına minimum adet</span>
+            <strong>50+</strong>
+            <span>minimum sipariş; altı özel üretim</span>
           </div>
           <div>
             <strong>1.100</strong>
@@ -105,7 +98,7 @@ export default function TurkishCollectionPage() {
               </div>
               <div>
                 <dt>MOQ</dt>
-                <dd>600-700 adet / renk</dd>
+                <dd>50+ adet</dd>
               </div>
               <div>
                 <dt>Ürün</dt>
@@ -145,7 +138,7 @@ export default function TurkishCollectionPage() {
               </div>
               <div>
                 <dt>MOQ</dt>
-                <dd>250 adet / model</dd>
+                <dd>50+ adet</dd>
               </div>
               <div>
                 <dt>Ürün</dt>
@@ -185,7 +178,7 @@ export default function TurkishCollectionPage() {
               </div>
               <div>
                 <dt>MOQ</dt>
-                <dd>300-500 adet / desen</dd>
+                <dd>50+ adet</dd>
               </div>
               <div>
                 <dt>Ürün</dt>
@@ -225,7 +218,7 @@ export default function TurkishCollectionPage() {
               </div>
               <div>
                 <dt>MOQ</dt>
-                <dd>500 adet / model</dd>
+                <dd>50+ adet</dd>
               </div>
               <div>
                 <dt>Ürün</dt>

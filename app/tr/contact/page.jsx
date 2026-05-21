@@ -16,30 +16,11 @@ export default function TurkishContactPage() {
       <section className="contact-page-hero">
         <div className="contact-page-copy">
           <p className="eyebrow">Üretim İletişimi</p>
-          <h1>
-            Bir sonraki üretim görüşmenizi başlatın.
-          </h1>
+          <h1>Bir sonraki üretim görüşmenizi başlatın.</h1>
           <p className="lead">
             Private label gömlek üretimi, numune, kumaş, adet planlama ve teslim
             zamanı için ekibimizle iletişime geçin.
           </p>
-        </div>
-
-        <div className="contact-page-visual">
-          <div className="contact-scene">
-            <div className="contact-scene-lamp"></div>
-            <div className="contact-scene-copy">
-              <strong>Private Label</strong>
-              <strong>Gömlek Üretimi</strong>
-              <span>Markalar için üretim desteği</span>
-            </div>
-            <div className="contact-scene-objects">
-              <span className="scene-block scene-block-small"></span>
-              <span className="scene-roll"></span>
-              <span className="scene-box"></span>
-              <span className="scene-sheet"></span>
-            </div>
-          </div>
         </div>
       </section>
 

@@ -53,32 +53,11 @@ export default function ContactPage() {
       <section className="contact-page-hero">
         <div className="contact-page-copy">
           <p className="eyebrow">Production Contact</p>
-          <h1>
-            Start your next
-            production
-            conversation.
-          </h1>
+          <h1>Start your next production conversation.</h1>
           <p className="lead">
             Connect with our team for private label shirt manufacturing,
             sampling, material discussions, and production planning.
           </p>
-        </div>
-
-        <div className="contact-page-visual">
-          <div className="contact-scene">
-            <div className="contact-scene-lamp"></div>
-            <div className="contact-scene-copy">
-              <strong>Private Label</strong>
-              <strong>Shirt Manufacturing</strong>
-              <span>Built for ambitious brands</span>
-            </div>
-            <div className="contact-scene-objects">
-              <span className="scene-block scene-block-small"></span>
-              <span className="scene-roll"></span>
-              <span className="scene-box"></span>
-              <span className="scene-sheet"></span>
-            </div>
-          </div>
         </div>
       </section>
 
