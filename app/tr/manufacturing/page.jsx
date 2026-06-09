@@ -285,6 +285,20 @@ export default function TurkishManufacturingPage() {
             <a href="mailto:info@mayagmurtextile.com">
               info@mayagmurtextile.com
             </a>
+            <a
+              href="https://www.instagram.com/mayagmurtekstil?igsh=MTQzcHdkb3RmdHpwbQ=="
+              target="_blank"
+              rel="noreferrer"
+            >
+              Instagram
+            </a>
+            <a
+              href="https://www.linkedin.com/company/ma-ya%C4%9Fmur-tekstil/posts/?feedView=all"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn
+            </a>
             <Link href="/tr/contact">Randevu / Talep</Link>
           </div>
           <div>

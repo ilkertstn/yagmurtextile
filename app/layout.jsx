@@ -47,7 +47,10 @@ export default function RootLayout({ children }) {
     logo: "https://www.mayagmurtextile.com/assets/logo.png",
     email: "mailto:info@mayagmurtextile.com",
     telephone: "+90 530 780 24 26",
-    sameAs: [],
+    sameAs: [
+      "https://www.instagram.com/mayagmurtekstil?igsh=MTQzcHdkb3RmdHpwbQ==",
+      "https://www.linkedin.com/company/ma-ya%C4%9Fmur-tekstil/posts/?feedView=all",
+    ],
   };
 
   const localBusinessSchema = {

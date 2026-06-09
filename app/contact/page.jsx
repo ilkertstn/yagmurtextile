@@ -162,7 +162,25 @@ export default function ContactPage() {
             </div>
           </article>
 
-      
+          <article className="contact-detail-card">
+            <h3>Social Channels</h3>
+            <div className="contact-socials">
+              <a
+                href="https://www.instagram.com/mayagmurtekstil?igsh=MTQzcHdkb3RmdHpwbQ=="
+                target="_blank"
+                rel="noreferrer"
+              >
+                Instagram
+              </a>
+              <a
+                href="https://www.linkedin.com/company/ma-ya%C4%9Fmur-tekstil/posts/?feedView=all"
+                target="_blank"
+                rel="noreferrer"
+              >
+                LinkedIn
+              </a>
+            </div>
+          </article>
         </aside>
       </section>
 
@@ -202,6 +220,20 @@ export default function ContactPage() {
             <a href="tel:+902122301316">+90 530 780 24 26</a>
             <a href="mailto:info@mayagmurtextile.com">
               info@mayagmurtextile.com
+            </a>
+            <a
+              href="https://www.instagram.com/mayagmurtekstil?igsh=MTQzcHdkb3RmdHpwbQ=="
+              target="_blank"
+              rel="noreferrer"
+            >
+              Instagram
+            </a>
+            <a
+              href="https://www.linkedin.com/company/ma-ya%C4%9Fmur-tekstil/posts/?feedView=all"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn
             </a>
           </div>
           <div>
