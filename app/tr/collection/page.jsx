@@ -1,19 +1,101 @@
 import Link from "next/link";
+import Image from "next/image";
 import MailtoContactForm from "../../../components/mailto-contact-form";
 import ProductImageToggle from "../../../components/product-image-toggle";
 
 export const metadata = {
-  title: "Koleksiyon",
+  title: "Gömlek Koleksiyonu ve Private Label Programları",
   description:
     "MA Yağmur Tekstil'in erkek ve kadın gömlek koleksiyonları, private label ürün programları ve üretime hazır gömlek hatlarını inceleyin.",
   alternates: {
     canonical: "/tr/collection",
+    languages: {
+      en: "https://www.mayagmurtextile.com/collection",
+      tr: "https://www.mayagmurtextile.com/tr/collection",
+      "x-default": "https://www.mayagmurtextile.com/collection",
+    },
+  },
+  openGraph: {
+    title: "Gömlek Koleksiyonu ve Private Label Programları | MA Yağmur Tekstil",
+    description:
+      "Formal, casual, keten ve üniforma gömlek programlarını inceleyin — private label ve toptan üretim ortakları için geliştirildi.",
+    url: "/tr/collection",
+    type: "website",
+  },
+  twitter: {
+    title: "Gömlek Koleksiyonu ve Private Label Programları | MA Yağmur Tekstil",
+    description:
+      "Formal, casual, keten ve üniforma gömlek programlarını inceleyin — private label ve toptan üretim ortakları için geliştirildi.",
   },
 };
 
 export default function TurkishCollectionPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Ana Sayfa", item: "https://www.mayagmurtextile.com/tr" },
+      { "@type": "ListItem", position: 2, name: "Koleksiyon", item: "https://www.mayagmurtextile.com/tr/collection" },
+    ],
+  };
+
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: [
+      {
+        "@type": "Product",
+        position: 1,
+        name: "Klasik Formal Gömlek",
+        description:
+          "İnce çizgili poplin kumaşı, temiz yaka formu ve özenli düğme önü işçiliğiyle business, tailoring ve premium private label koleksiyonları için geliştirilen uzun kollu formal gömlek üretimi.",
+        image: "https://www.mayagmurtextile.com/assets/products/shirts-2.png",
+        material: "Poplin, pinpoint, pamuklu karışım kumaşlar",
+        url: "https://www.mayagmurtextile.com/tr/collection",
+      },
+      {
+        "@type": "Product",
+        position: 2,
+        name: "Casual Overshirt",
+        description:
+          "Yumuşak dokulu kumaş yapısı, relaxed silüeti ve utility detaylarıyla modern casual ve off-duty koleksiyonlar için geliştirilen overshirt üretimi.",
+        image: "https://www.mayagmurtextile.com/assets/products/shirts-3.png",
+        material: "Oxford, twill, brushed cotton kumaşlar",
+        url: "https://www.mayagmurtextile.com/tr/collection",
+      },
+      {
+        "@type": "Product",
+        position: 3,
+        name: "Tropikal Desenli Resort Gömlek",
+        description:
+          "Lacivert zemin üzerine doğal tropikal desenleri, hafif dokulu kumaşı ve rahat yaz silüetiyle resort ve premium casual koleksiyonlara uygun gömlek üretimi.",
+        image: "https://www.mayagmurtextile.com/assets/products/shirts-1.png",
+        material: "Dokulu pamuk / keten karışım kumaş",
+        url: "https://www.mayagmurtextile.com/tr/collection",
+      },
+      {
+        "@type": "Product",
+        position: 4,
+        name: "Aviation & Corporate Uniforms",
+        description:
+          "Havacılık, otelcilik ve kurumsal giyim programları için geliştirilen, uzun vadeli tekrar üretim ve tutarlı kalite standartları gerektiren uniform gömlek çözümleri.",
+        image: "https://www.mayagmurtextile.com/assets/products/shirts-4.png",
+        material: "Kolay bakım pamuklu karışımlar",
+        url: "https://www.mayagmurtextile.com/tr/collection",
+      },
+    ],
+  };
+
   return (
     <main className="subpage-main">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+      />
       <section className="products-hero">
         <div className="products-hero-copy">
           <p className="eyebrow">Private label gömlek programları</p>
@@ -35,9 +117,12 @@ export default function TurkishCollectionPage() {
 
         <div className="products-hero-media">
           <div className="products-hero-frame products-hero-frame-large">
-            <img
+            <Image
               src="/assets/showroom.png"
               alt="Showroom'da sergilenen gömlek koleksiyonu"
+              width={1448}
+              height={1086}
+              priority
             />
           </div>
         </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -8,6 +9,7 @@ const navItems = [
   { href: "/", label: "Home", labelTr: "Ana Sayfa" },
   { href: "/manufacturing", label: "Manufacturing", labelTr: "Üretim" },
   { href: "/collection", label: "Collection", labelTr: "Koleksiyon" },
+  { href: "/blog", label: "Blog", labelTr: "Blog" },
   { href: "/contact", label: "Contact", labelTr: "İletişim" },
 ];
 
@@ -31,6 +33,10 @@ export default function SiteHeader() {
     setIsMenuOpen(false);
   }, [pathname]);
 
+  useEffect(() => {
+    document.documentElement.lang = isTurkish ? "tr" : "en";
+  }, [isTurkish]);
+
   return (
     <header className="site-header">
       <Link
@@ -38,10 +44,13 @@ export default function SiteHeader() {
         href={isTurkish ? "/tr" : "/"}
         aria-label="MA Yagmur Textile homepage"
       >
-        <img
+        <Image
           className={isTurkish ? "brand-logo-tr" : undefined}
           src={isTurkish ? "/assets/logo-turkce-cropped.png" : "/assets/logo-cropped.png"}
           alt={isTurkish ? "MA Yağmur Tekstil" : "MA Yagmur Textile"}
+          width={isTurkish ? 866 : 1072}
+          height={isTurkish ? 504 : 540}
+          priority
         />
       </Link>
 

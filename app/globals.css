@@ -88,6 +88,12 @@ textarea {
 .collection,
 .production-snapshot,
 .contact-banner,
+.blog-hero,
+.blog-grid,
+.article-hero,
+.article-body,
+.article-cta,
+.faq-section,
 .site-footer {
   width: min(1180px, calc(100% - 48px));
   margin: 0 auto;
@@ -1122,6 +1128,234 @@ textarea {
   justify-content: center;
   gap: 14px;
   margin-top: 28px;
+}
+
+.blog-hero {
+  padding: 56px 0 48px;
+  text-align: center;
+}
+
+.blog-hero h1 {
+  margin: 0 auto;
+  max-width: 26ch;
+  font-family: var(--serif);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  font-size: clamp(2.8rem, 5vw, 4.6rem);
+  line-height: 1;
+}
+
+.blog-hero .lead {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  padding: 0 0 96px;
+}
+
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 36px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+  transition: transform 220ms ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-4px);
+}
+
+.blog-card h2 {
+  margin: 0;
+  font-family: var(--serif);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  font-size: clamp(1.5rem, 2.4vw, 1.9rem);
+  line-height: 1.15;
+}
+
+.blog-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.7;
+}
+
+.blog-card-link {
+  margin-top: auto;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.article-hero {
+  padding: 56px 0 40px;
+  max-width: 46rem;
+}
+
+.article-hero h1 {
+  margin: 16px 0 0;
+  font-family: var(--serif);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  font-size: clamp(2.6rem, 5vw, 4.2rem);
+  line-height: 1.05;
+}
+
+.article-body {
+  max-width: 46rem;
+  padding-bottom: 64px;
+  color: var(--ink);
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+.article-body h2 {
+  margin: 42px 0 14px;
+  font-family: var(--serif);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  font-size: clamp(1.4rem, 2.6vw, 1.9rem);
+}
+
+.article-body p {
+  margin: 0 0 18px;
+  color: var(--muted);
+}
+
+.article-body ul {
+  margin: 0 0 18px;
+  padding-left: 22px;
+  color: var(--muted);
+  display: grid;
+  gap: 10px;
+}
+
+.article-body strong {
+  color: var(--ink);
+}
+
+.article-figure {
+  margin: 8px 0 32px;
+}
+
+.article-figure img {
+  box-shadow: var(--shadow);
+}
+
+.article-figure figcaption {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 0.82rem;
+  letter-spacing: 0.01em;
+}
+
+.article-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin: 8px 0 32px;
+}
+
+.article-gallery img {
+  box-shadow: var(--shadow);
+  height: 100%;
+  object-fit: cover;
+}
+
+.article-gallery figcaption {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+@media (max-width: 640px) {
+  .article-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+.article-cta {
+  padding: 20px 0 96px;
+  text-align: center;
+}
+
+.article-cta h2 {
+  margin: 0;
+  font-family: var(--serif);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  font-size: clamp(2rem, 3.6vw, 3rem);
+}
+
+.article-cta p {
+  max-width: 36rem;
+  margin: 14px auto 0;
+  color: var(--muted);
+}
+
+.article-cta-actions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+@media (max-width: 720px) {
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.faq-section {
+  padding: 20px 0 96px;
+}
+
+.faq-heading {
+  max-width: 40rem;
+  margin: 0 0 40px;
+}
+
+.faq-heading h2 {
+  margin: 0;
+  font-family: var(--serif);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  font-size: clamp(2rem, 3.6vw, 3rem);
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px 48px;
+}
+
+.faq-item h3 {
+  margin: 0 0 10px;
+  font-family: var(--serif);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  font-size: 1.2rem;
+}
+
+.faq-item p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.75;
+}
+
+@media (max-width: 720px) {
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .page-hero h1 {

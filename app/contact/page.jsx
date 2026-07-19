@@ -7,6 +7,11 @@ export const metadata = {
     "Contact MA Yagmur Textile for private label shirt manufacturing, sampling, production planning, and project inquiries.",
   alternates: {
     canonical: "/contact",
+    languages: {
+      en: "https://www.mayagmurtextile.com/contact",
+      tr: "https://www.mayagmurtextile.com/tr/contact",
+      "x-default": "https://www.mayagmurtextile.com/contact",
+    },
   },
   openGraph: {
     title: "Contact | MA Yagmur Textile Istanbul",

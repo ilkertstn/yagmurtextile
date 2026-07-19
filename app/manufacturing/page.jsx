@@ -1,24 +1,30 @@
 import Link from "next/link";
+import Image from "next/image";
 import MailtoContactForm from "../../components/mailto-contact-form";
 
 export const metadata = {
-  title: "Manufacturing",
+  title: "Private Label Shirt Manufacturing",
   description:
-    "Explore MA Yagmur Textile's manufacturing capabilities, workshop discipline, quality control process, and export-ready textile production in Istanbul.",
+    "Private label shirt manufacturing in Istanbul with 50+ pcs MOQ, workshop quality control, and export-ready production for wholesale and brand partners.",
   alternates: {
     canonical: "/manufacturing",
+    languages: {
+      en: "https://www.mayagmurtextile.com/manufacturing",
+      tr: "https://www.mayagmurtextile.com/tr/manufacturing",
+      "x-default": "https://www.mayagmurtextile.com/manufacturing",
+    },
   },
   openGraph: {
-    title: "Manufacturing | MA Yagmur Textile Istanbul",
+    title: "Private Label Shirt Manufacturing | MA Yagmur Textile Istanbul",
     description:
-      "See the workshop culture, quality systems, and production infrastructure behind MA Yagmur Textile.",
+      "Private label shirt manufacturing in Istanbul with low MOQ, workshop quality control, and export-ready production.",
     url: "/manufacturing",
     type: "website",
   },
   twitter: {
-    title: "Manufacturing | MA Yagmur Textile Istanbul",
+    title: "Private Label Shirt Manufacturing | MA Yagmur Textile Istanbul",
     description:
-      "See the workshop culture, quality systems, and production infrastructure behind MA Yagmur Textile.",
+      "Private label shirt manufacturing in Istanbul with low MOQ, workshop quality control, and export-ready production.",
   },
 };
 
@@ -42,12 +48,73 @@ export default function ManufacturingPage() {
     ],
   };
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What is your minimum order quantity (MOQ)?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Our MOQ starts from 50 pieces per style/color, with custom development available for smaller orders and new brands.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How does the sampling process work?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "We deliver a first sample from your tech pack or reference garment, followed by revision rounds until fit and construction are approved before bulk production begins.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is your production lead time?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Bulk production timelines depend on order volume and fabric sourcing, typically ranging from a few weeks to a couple of months after sample approval.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Which regions do you export to?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "We produce and ship to brand and wholesale partners across Europe, the UK, the US, and the Middle East.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Can you source and develop custom fabrics?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes — we work with poplin, oxford, twill, and linen-blend fabrics, and can source or develop custom fabric options for private label programs.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Do you offer private label and branding options?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes — custom labels, trims, packaging, and branding are available across every program, from sampling through bulk production.",
+        },
+      },
+    ],
+  };
+
   return (
     <main className="subpage-main">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(breadcrumbSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema),
         }}
       />
       <section className="manufacturing-hero">
@@ -61,10 +128,11 @@ export default function ManufacturingPage() {
         ></video>
         <div className="manufacturing-hero-overlay">
           <p className="eyebrow">Private Label Shirt Manufacturing — Istanbul</p>
-          <h1>Precision Manufacturing at Scale.</h1>
+          <h1>Private Label Shirt Manufacturing at Scale.</h1>
           <p className="lead">
-            We manufacture private label shirts with structured production,
-            consistent quality, and export-ready execution for global partners.
+            We manufacture private label shirts from 50+ pieces MOQ, with
+            structured production, consistent quality, and export-ready
+            execution for global partners.
           </p>
         </div>
       </section>
@@ -90,7 +158,12 @@ export default function ManufacturingPage() {
 
       <section className="atelier-overview" id="craft">
         <div className="atelier-overview-media">
-          <img src="/assets/heritage.jpg" alt="Hand holding wool fabric detail" />
+          <Image
+            src="/assets/heritage.jpg"
+            alt="Hand holding wool fabric detail"
+            width={1287}
+            height={860}
+          />
         </div>
         <div className="atelier-overview-copy">
           <p className="eyebrow">Workshop Culture</p>
@@ -290,6 +363,61 @@ export default function ManufacturingPage() {
             <p>
               Stable production planning and long-term support for repeat orders
               and seasonal collections.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section className="faq-section" id="faq">
+        <div className="faq-heading">
+          <p className="eyebrow">Frequently Asked Questions</p>
+          <h2>What brands ask before starting production.</h2>
+        </div>
+        <div className="faq-grid">
+          <article className="faq-item">
+            <h3>What is your minimum order quantity (MOQ)?</h3>
+            <p>
+              Our MOQ starts from 50 pieces per style/color, with custom
+              development available for smaller orders and new brands.
+            </p>
+          </article>
+          <article className="faq-item">
+            <h3>How does the sampling process work?</h3>
+            <p>
+              We deliver a first sample from your tech pack or reference
+              garment, followed by revision rounds until fit and construction
+              are approved before bulk production begins.
+            </p>
+          </article>
+          <article className="faq-item">
+            <h3>What is your production lead time?</h3>
+            <p>
+              Bulk production timelines depend on order volume and fabric
+              sourcing, typically ranging from a few weeks to a couple of
+              months after sample approval.
+            </p>
+          </article>
+          <article className="faq-item">
+            <h3>Which regions do you export to?</h3>
+            <p>
+              We produce and ship to brand and wholesale partners across
+              Europe, the UK, the US, and the Middle East.
+            </p>
+          </article>
+          <article className="faq-item">
+            <h3>Can you source and develop custom fabrics?</h3>
+            <p>
+              Yes — we work with poplin, oxford, twill, and linen-blend
+              fabrics, and can source or develop custom fabric options for
+              private label programs.
+            </p>
+          </article>
+          <article className="faq-item">
+            <h3>Do you offer private label and branding options?</h3>
+            <p>
+              Yes — custom labels, trims, packaging, and branding are
+              available across every program, from sampling through bulk
+              production.
             </p>
           </article>
         </div>

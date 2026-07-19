@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 export default function ProductImageToggle({
   primarySrc,
@@ -21,7 +22,12 @@ export default function ProductImageToggle({
       aria-label={isCloseUp ? secondaryLabel : primaryLabel}
       onClick={() => setIsCloseUp((value) => !value)}
     >
-      <img src={src} alt={alt} />
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        sizes="(max-width: 768px) 100vw, 50vw"
+      />
       <span>{isCloseUp ? secondaryLabel : primaryLabel}</span>
     </button>
   );

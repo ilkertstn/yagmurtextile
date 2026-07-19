@@ -1,12 +1,32 @@
 import Link from "next/link";
+import Image from "next/image";
 import MailtoContactForm from "../../components/mailto-contact-form";
 
 export const metadata = {
-  title: "İstanbul Gömlek Üreticisi",
+  title: {
+    absolute: "MA Yağmur Tekstil | İstanbul Private Label Gömlek Üreticisi",
+  },
   description:
-    "MA Yağmur Tekstil, İstanbul merkezli erkek ve kadın gömlek üretimi, private label üretim ve ihracata hazır tekstil programları sunar.",
+    "İstanbul merkezli private label gömlek üreticisi: düşük MOQ, toptan üretim ve ihracata hazır tekstil programları.",
   alternates: {
     canonical: "/tr",
+    languages: {
+      en: "https://www.mayagmurtextile.com/",
+      tr: "https://www.mayagmurtextile.com/tr",
+      "x-default": "https://www.mayagmurtextile.com/",
+    },
+  },
+  openGraph: {
+    title: "MA Yağmur Tekstil | İstanbul Private Label Gömlek Üreticisi",
+    description:
+      "Private label gömlek üretimi, atölye disiplini ve koleksiyon geliştirme — MA Yağmur Tekstil.",
+    url: "/tr",
+    type: "website",
+  },
+  twitter: {
+    title: "MA Yağmur Tekstil | İstanbul Private Label Gömlek Üreticisi",
+    description:
+      "Private label gömlek üretimi, atölye disiplini ve koleksiyon geliştirme — MA Yağmur Tekstil.",
   },
 };
 
@@ -32,9 +52,12 @@ export default function TurkishHomePage() {
 
         <div className="hero-visual">
           <div className="portrait-card portrait-card-large">
-            <img
+            <Image
               src="/assets/hero-banner.png"
               alt="MA Yağmur Tekstil gömlek üretim detayı"
+              width={820}
+              height={1168}
+              priority
             />
           </div>
           <div className="signature-card">
@@ -95,10 +118,20 @@ export default function TurkishHomePage() {
       <section className="story-grid" id="atelier">
         <div className="story-media">
           <div className="pattern-panel">
-            <img src="/assets/kumas-turu.png" alt="Kumaş kartelası seçimi" />
+            <Image
+              src="/assets/kumas-turu.png"
+              alt="Kumaş kartelası seçimi"
+              width={1024}
+              height={1536}
+            />
           </div>
           <div className="small-card">
-            <img src="/assets/heritage.jpg" alt="Tekstil atölyesi üretim detayı" />
+            <Image
+              src="/assets/heritage.jpg"
+              alt="Tekstil atölyesi üretim detayı"
+              width={1287}
+              height={860}
+            />
           </div>
         </div>
 
@@ -152,7 +185,12 @@ export default function TurkishHomePage() {
 
         <div className="collection-grid">
           <article className="product-card product-card-tall product-card-hover-color">
-            <img src="/assets/iconlast-1.jpg" alt="Klasik gömlek üretim örneği" />
+            <Image
+              src="/assets/iconlast-1.jpg"
+              alt="Klasik gömlek üretim örneği"
+              width={922}
+              height={1152}
+            />
             <div className="product-meta">
               <h3>Çizgili Klasik Gömlek</h3>
               <p>Business ve formal koleksiyonlar için uzun kollu gömlek üretimi.</p>
@@ -160,7 +198,12 @@ export default function TurkishHomePage() {
           </article>
 
           <article className="product-card product-card-offset product-card-hover-color">
-            <img src="/assets/iconlast-2.png" alt="Casual gömlek üretim örneği" />
+            <Image
+              src="/assets/iconlast-2.png"
+              alt="Casual gömlek üretim örneği"
+              width={1046}
+              height={844}
+            />
             <div className="product-meta">
               <h3>Overshirt Programı</h3>
               <p>Premium casual ve katmanlı koleksiyonlar için yapılandırılmış overshirt.</p>
@@ -168,7 +211,12 @@ export default function TurkishHomePage() {
           </article>
 
           <article className="product-card product-card-hover-color">
-            <img src="/assets/iconlast-4.png" alt="Gömlek üretim detayı" />
+            <Image
+              src="/assets/iconlast-4.png"
+              alt="Gömlek üretim detayı"
+              width={922}
+              height={1152}
+            />
             <div className="product-meta">
               <h3>Keten Utility Gömlek</h3>
               <p>Yaz ve resort koleksiyonları için nefes alan doğal elyaflı modeller.</p>
@@ -176,7 +224,12 @@ export default function TurkishHomePage() {
           </article>
 
           <article className="product-card product-card-wide product-card-hover-color">
-            <img src="/assets/iconlast-5.png" alt="Sezonluk gömlek koleksiyonu detayı" />
+            <Image
+              src="/assets/iconlast-5.png"
+              alt="Sezonluk gömlek koleksiyonu detayı"
+              width={1026}
+              height={954}
+            />
             <div className="product-meta">
               <h3>Kısa Kollu Fermuarlı Gömlek</h3>
               <p>Sezonluk ve kapsül koleksiyonlar için modern kısa kollu modeller.</p>

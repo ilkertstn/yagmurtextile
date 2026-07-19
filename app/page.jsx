@@ -1,12 +1,20 @@
 import Link from "next/link";
+import Image from "next/image";
 import MailtoContactForm from "../components/mailto-contact-form";
 
 export const metadata = {
-  title: "Shirt Manufacturer in Istanbul",
+  title: {
+    absolute: "MA Yagmur Textile | Private Label Shirt Manufacturer Istanbul",
+  },
   description:
-    "MA Yagmur Textile is an Istanbul-based shirt manufacturer specializing in private label shirt production, wholesale development, and export-ready textile programs.",
+    "Istanbul-based private label shirt manufacturer offering wholesale production, low MOQ sampling, and export-ready programs for global brands.",
   alternates: {
     canonical: "/",
+    languages: {
+      en: "https://www.mayagmurtextile.com/",
+      tr: "https://www.mayagmurtextile.com/tr",
+      "x-default": "https://www.mayagmurtextile.com/",
+    },
   },
   openGraph: {
     title: "MA Yagmur Textile | Shirt Manufacturer in Istanbul",
@@ -43,9 +51,12 @@ export default function HomePage() {
 
         <div className="hero-visual">
           <div className="portrait-card portrait-card-large">
-            <img
+            <Image
               src="/assets/hero-banner.png"
               alt="MA Yagmur Textile shirt production detail"
+              width={820}
+              height={1168}
+              priority
             />
           </div>
           <div className="signature-card">
@@ -106,10 +117,20 @@ export default function HomePage() {
       <section className="story-grid" id="atelier">
         <div className="story-media">
           <div className="pattern-panel">
-            <img src="/assets/kumas-turu.png" alt="Fabric swatch selection" />
+            <Image
+              src="/assets/kumas-turu.png"
+              alt="Fabric swatch selection"
+              width={1024}
+              height={1536}
+            />
           </div>
           <div className="small-card">
-            <img src="/assets/heritage.jpg" alt="Textile workshop production detail" />
+            <Image
+              src="/assets/heritage.jpg"
+              alt="Textile workshop production detail"
+              width={1287}
+              height={860}
+            />
           </div>
         </div>
 
@@ -164,9 +185,11 @@ export default function HomePage() {
 
         <div className="collection-grid">
           <article className="product-card product-card-tall product-card-hover-color">
-            <img
+            <Image
               src="/assets/iconlast-1.jpg"
               alt="Formal shirt manufacturing sample"
+              width={922}
+              height={1152}
             />
             <div className="product-meta">
               <h3>Striped Dress Shirt</h3>
@@ -175,9 +198,11 @@ export default function HomePage() {
           </article>
 
           <article className="product-card product-card-offset product-card-hover-color">
-            <img
+            <Image
               src="/assets/iconlast-2.png"
               alt="Casual shirt production sample"
+              width={1046}
+              height={844}
             />
             <div className="product-meta">
               <h3>Overshirt Program</h3>
@@ -186,9 +211,11 @@ export default function HomePage() {
           </article>
 
           <article className="product-card product-card-hover-color">
-            <img
+            <Image
               src="/assets/iconlast-4.png"
               alt="Uniform shirt production detail"
+              width={922}
+              height={1152}
             />
             <div className="product-meta">
               <h3>Linen Utility Shirt</h3>
@@ -197,9 +224,11 @@ export default function HomePage() {
           </article>
 
           <article className="product-card product-card-wide product-card-hover-color">
-            <img
+            <Image
               src="/assets/iconlast-5.png"
               alt="Seasonal shirt collection detail"
+              width={1026}
+              height={954}
             />
             <div className="product-meta">
               <h3>Short-Sleeve Zip Shirt</h3>

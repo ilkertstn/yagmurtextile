@@ -1,13 +1,19 @@
 import Link from "next/link";
+import Image from "next/image";
 import MailtoContactForm from "../../components/mailto-contact-form";
 import ProductImageToggle from "../../components/product-image-toggle";
 
 export const metadata = {
-  title: "Collection",
+  title: "Shirt Collection & Private Label Programs",
   description:
     "Explore shirt collections, private label programs, and manufacturing-ready product lines from MA Yagmur Textile for wholesale and contract production.",
   alternates: {
     canonical: "/collection",
+    languages: {
+      en: "https://www.mayagmurtextile.com/collection",
+      tr: "https://www.mayagmurtextile.com/tr/collection",
+      "x-default": "https://www.mayagmurtextile.com/collection",
+    },
   },
   openGraph: {
     title: "Collection | MA Yagmur Textile Shirt Programs",
@@ -43,12 +49,65 @@ export default function CollectionPage() {
     ],
   };
 
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: [
+      {
+        "@type": "Product",
+        position: 1,
+        name: "Classic Formal Shirt",
+        description:
+          "A long-sleeve formal shirt program developed with fine striped poplin fabric, a clean collar shape, and precise button-front construction for business, tailoring, and premium private label collections.",
+        image: "https://www.mayagmurtextile.com/assets/products/shirts-2.png",
+        material: "Poplin, pinpoint, cotton blend fabrics",
+        url: "https://www.mayagmurtextile.com/collection",
+      },
+      {
+        "@type": "Product",
+        position: 2,
+        name: "Casual Overshirt",
+        description:
+          "Overshirt production developed with softly textured fabrics, a relaxed silhouette, and utility details for modern casual and off-duty collections.",
+        image: "https://www.mayagmurtextile.com/assets/products/shirts-3.png",
+        material: "Oxford, twill, brushed cotton fabrics",
+        url: "https://www.mayagmurtextile.com/collection",
+      },
+      {
+        "@type": "Product",
+        position: 3,
+        name: "Tropical Resort Shirt",
+        description:
+          "A navy-ground tropical print shirt with natural motifs, lightly textured fabric, and an easy summer silhouette for resort and premium casual collections.",
+        image: "https://www.mayagmurtextile.com/assets/products/shirts-1.png",
+        material: "Textured cotton / linen blend",
+        url: "https://www.mayagmurtextile.com/collection",
+      },
+      {
+        "@type": "Product",
+        position: 4,
+        name: "Aviation & Corporate Uniforms",
+        description:
+          "Uniform shirt solutions developed for aviation, hospitality, and corporate wear programs that require long-term repeat production and consistent quality standards.",
+        image: "https://www.mayagmurtextile.com/assets/products/shirts-4.png",
+        material: "Easy-care cotton blends",
+        url: "https://www.mayagmurtextile.com/collection",
+      },
+    ],
+  };
+
   return (
     <main className="subpage-main">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(breadcrumbSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(itemListSchema),
         }}
       />
       <section className="products-hero">
@@ -72,9 +131,12 @@ export default function CollectionPage() {
 
         <div className="products-hero-media">
           <div className="products-hero-frame products-hero-frame-large">
-            <img
+            <Image
               src="/assets/showroom.png"
               alt="Shirt collection displayed in the showroom"
+              width={1448}
+              height={1086}
+              priority
             />
           </div>
         </div>

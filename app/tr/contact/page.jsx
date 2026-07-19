@@ -7,12 +7,42 @@ export const metadata = {
     "Private label gömlek üretimi, numune, üretim planlama ve proje talepleri için MA Yağmur Tekstil ile iletişime geçin.",
   alternates: {
     canonical: "/tr/contact",
+    languages: {
+      en: "https://www.mayagmurtextile.com/contact",
+      tr: "https://www.mayagmurtextile.com/tr/contact",
+      "x-default": "https://www.mayagmurtextile.com/contact",
+    },
+  },
+  openGraph: {
+    title: "İletişim | MA Yağmur Tekstil İstanbul",
+    description:
+      "Üretim talepleri, numune görüşmeleri ve private label gömlek üretimi için MA Yağmur Tekstil'e ulaşın.",
+    url: "/tr/contact",
+    type: "website",
+  },
+  twitter: {
+    title: "İletişim | MA Yağmur Tekstil İstanbul",
+    description:
+      "Üretim talepleri, numune görüşmeleri ve private label gömlek üretimi için MA Yağmur Tekstil'e ulaşın.",
   },
 };
 
 export default function TurkishContactPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Ana Sayfa", item: "https://www.mayagmurtextile.com/tr" },
+      { "@type": "ListItem", position: 2, name: "İletişim", item: "https://www.mayagmurtextile.com/tr/contact" },
+    ],
+  };
+
   return (
     <main className="subpage-main">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <section className="contact-page-hero">
         <div className="contact-page-copy">
           <p className="eyebrow">Üretim İletişimi</p>

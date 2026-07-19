@@ -1,18 +1,108 @@
 import Link from "next/link";
+import Image from "next/image";
 import MailtoContactForm from "../../../components/mailto-contact-form";
 
 export const metadata = {
-  title: "Üretim",
+  title: "Private Label Gömlek Üretimi",
   description:
-    "MA Yağmur Tekstil'in gömlek üretim kapasitesini, atölye disiplinini, kalite kontrol sürecini ve ihracata hazır üretim yaklaşımını keşfedin.",
+    "İstanbul'da private label gömlek üretimi: 50+ adet MOQ, atölye kalite kontrolü ve ihracata hazır üretim ile toptan ve marka ortaklarına hizmet.",
   alternates: {
     canonical: "/tr/manufacturing",
+    languages: {
+      en: "https://www.mayagmurtextile.com/manufacturing",
+      tr: "https://www.mayagmurtextile.com/tr/manufacturing",
+      "x-default": "https://www.mayagmurtextile.com/manufacturing",
+    },
+  },
+  openGraph: {
+    title: "Private Label Gömlek Üretimi | MA Yağmur Tekstil İstanbul",
+    description:
+      "İstanbul'da private label gömlek üretimi: düşük MOQ, atölye kalite kontrolü ve ihracata hazır üretim.",
+    url: "/tr/manufacturing",
+    type: "website",
+  },
+  twitter: {
+    title: "Private Label Gömlek Üretimi | MA Yağmur Tekstil İstanbul",
+    description:
+      "İstanbul'da private label gömlek üretimi: düşük MOQ, atölye kalite kontrolü ve ihracata hazır üretim.",
   },
 };
 
 export default function TurkishManufacturingPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Ana Sayfa", item: "https://www.mayagmurtextile.com/tr" },
+      { "@type": "ListItem", position: 2, name: "Üretim", item: "https://www.mayagmurtextile.com/tr/manufacturing" },
+    ],
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "Minimum sipariş adediniz (MOQ) nedir?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "MOQ'muz model/renk başına 50 adetten başlıyor; daha küçük siparişler ve yeni markalar için özel geliştirme seçenekleri de mevcut.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Numune süreci nasıl işliyor?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Teknik paketiniz veya referans ürününüzden ilk numuneyi hazırlıyor, kalıp ve işçilik onaylanana kadar revizyon turlarıyla ilerliyoruz; ardından toplu üretime geçiyoruz.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Üretim teslim süreniz nedir?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Toplu üretim süresi sipariş adedine ve kumaş tedarikine göre değişir; numune onayından sonra genellikle birkaç haftadan birkaç aya kadar sürer.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Hangi bölgelere ihracat yapıyorsunuz?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Avrupa, İngiltere, ABD ve Orta Doğu'daki marka ve toptan iş ortaklarına üretim ve sevkiyat yapıyoruz.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Özel kumaş tedariki veya geliştirmesi yapıyor musunuz?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Evet — poplin, oxford, twill ve keten karışımlı kumaşlarla çalışıyor, private label programları için özel kumaş tedariki veya geliştirmesi yapabiliyoruz.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Private label ve markalama seçenekleri sunuyor musunuz?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Evet — numuneden toplu üretime kadar tüm programlarda özel etiket, aksesuar, paketleme ve markalama seçenekleri mevcuttur.",
+        },
+      },
+    ],
+  };
+
   return (
     <main className="subpage-main">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <section className="manufacturing-hero">
         <video
           src="/assets/atelier/WhatsApp Video 2026-04-11 at 00.16.35.mp4"
@@ -24,11 +114,11 @@ export default function TurkishManufacturingPage() {
         ></video>
         <div className="manufacturing-hero-overlay">
           <p className="eyebrow">Private Label Gömlek Üretimi - İstanbul</p>
-          <h1>Ölçekli ve Kontrollü Gömlek Üretimi.</h1>
+          <h1>Private Label Gömlek Üretimi ve Ölçekli Kapasite.</h1>
           <p className="lead">
-            Erkek ve kadın gömleklerinde düzenli üretim kapasitesi, kalite
-            kontrol ve ihracata hazır süreçlerle markalara üretim desteği
-            sağlıyoruz.
+            50+ adetten başlayan MOQ ile erkek ve kadın gömleklerinde düzenli
+            üretim kapasitesi, kalite kontrol ve ihracata hazır süreçlerle
+            markalara üretim desteği sağlıyoruz.
           </p>
         </div>
       </section>
@@ -54,7 +144,12 @@ export default function TurkishManufacturingPage() {
 
       <section className="atelier-overview" id="craft">
         <div className="atelier-overview-media">
-          <img src="/assets/heritage.jpg" alt="Kumaş ve üretim detayı" />
+          <Image
+            src="/assets/heritage.jpg"
+            alt="Kumaş ve üretim detayı"
+            width={1287}
+            height={860}
+          />
         </div>
         <div className="atelier-overview-copy">
           <p className="eyebrow">Atölye Kültürü</p>
@@ -207,6 +302,61 @@ export default function TurkishManufacturingPage() {
               <p>{text}</p>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="faq-section" id="faq">
+        <div className="faq-heading">
+          <p className="eyebrow">Sık Sorulan Sorular</p>
+          <h2>Markaların üretime başlamadan önce sorduğu sorular.</h2>
+        </div>
+        <div className="faq-grid">
+          <article className="faq-item">
+            <h3>Minimum sipariş adediniz (MOQ) nedir?</h3>
+            <p>
+              MOQ'muz model/renk başına 50 adetten başlıyor; daha küçük
+              siparişler ve yeni markalar için özel geliştirme seçenekleri de
+              mevcut.
+            </p>
+          </article>
+          <article className="faq-item">
+            <h3>Numune süreci nasıl işliyor?</h3>
+            <p>
+              Teknik paketiniz veya referans ürününüzden ilk numuneyi
+              hazırlıyor, kalıp ve işçilik onaylanana kadar revizyon
+              turlarıyla ilerliyoruz; ardından toplu üretime geçiyoruz.
+            </p>
+          </article>
+          <article className="faq-item">
+            <h3>Üretim teslim süreniz nedir?</h3>
+            <p>
+              Toplu üretim süresi sipariş adedine ve kumaş tedarikine göre
+              değişir; numune onayından sonra genellikle birkaç haftadan
+              birkaç aya kadar sürer.
+            </p>
+          </article>
+          <article className="faq-item">
+            <h3>Hangi bölgelere ihracat yapıyorsunuz?</h3>
+            <p>
+              Avrupa, İngiltere, ABD ve Orta Doğu'daki marka ve toptan iş
+              ortaklarına üretim ve sevkiyat yapıyoruz.
+            </p>
+          </article>
+          <article className="faq-item">
+            <h3>Özel kumaş tedariki veya geliştirmesi yapıyor musunuz?</h3>
+            <p>
+              Evet — poplin, oxford, twill ve keten karışımlı kumaşlarla
+              çalışıyor, private label programları için özel kumaş tedariki
+              veya geliştirmesi yapabiliyoruz.
+            </p>
+          </article>
+          <article className="faq-item">
+            <h3>Private label ve markalama seçenekleri sunuyor musunuz?</h3>
+            <p>
+              Evet — numuneden toplu üretime kadar tüm programlarda özel
+              etiket, aksesuar, paketleme ve markalama seçenekleri mevcuttur.
+            </p>
+          </article>
         </div>
       </section>
 
