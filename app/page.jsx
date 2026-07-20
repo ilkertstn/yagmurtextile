@@ -87,7 +87,7 @@ export default function HomePage() {
 
           <article className="snapshot-card">
             <span>02</span>
-            <h3>MOQ 50+ pcs</h3>
+            <h3>MOQ 300+ pcs</h3>
             <p>
               Minimum order planning starts from 50 pieces. Orders below 50
               pieces are handled as custom production.
