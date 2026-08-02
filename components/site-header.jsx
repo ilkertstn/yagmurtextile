@@ -45,11 +45,10 @@ export default function SiteHeader() {
         aria-label="MA Yagmur Textile homepage"
       >
         <Image
-          className={isTurkish ? "brand-logo-tr" : undefined}
           src={isTurkish ? "/assets/logo-turkce-cropped.png" : "/assets/logo-cropped.png"}
           alt={isTurkish ? "MA Yağmur Tekstil" : "MA Yagmur Textile"}
-          width={isTurkish ? 866 : 1072}
-          height={isTurkish ? 504 : 540}
+          width={isTurkish ? 748 : 1072}
+          height={isTurkish ? 371 : 540}
           priority
         />
       </Link>
