@@ -6,6 +6,7 @@ export default function sitemap() {
     "/manufacturing",
     "/collection",
     "/blog",
+    "/blog/private-label-shirt-manufacturer",
     "/blog/shirt-sleeve-types",
     "/blog/summer-shirt-guide",
     "/contact",

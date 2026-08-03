@@ -28,6 +28,12 @@ export const metadata = {
 
 const posts = [
   {
+    slug: "private-label-shirt-manufacturer",
+    title: "Choosing a Private Label Shirt Manufacturer: What to Look For",
+    excerpt:
+      "MOQ, sampling, fabric sourcing, quality control, and export readiness — what to evaluate before committing a season's production to a factory.",
+  },
+  {
     slug: "shirt-sleeve-types",
     title: "Shirt Sleeve Types Explained: A Complete Guide to Cuffs, Lengths & Styles",
     excerpt:
