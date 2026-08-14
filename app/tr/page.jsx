@@ -69,7 +69,7 @@ export default function TurkishHomePage() {
       </section>
 
       <section className="production-snapshot" aria-labelledby="production-snapshot-title">
-        <div className="snapshot-heading">
+        <div className="snapshot-heading" data-reveal>
           <p className="eyebrow">Üretime Genel Bakış</p>
           <h2 id="production-snapshot-title">
             Private label gömlek programları için net üretim bilgileri.
@@ -77,7 +77,7 @@ export default function TurkishHomePage() {
         </div>
 
         <div className="snapshot-grid">
-          <article className="snapshot-card">
+          <article className="snapshot-card" data-reveal>
             <span>01</span>
             <h3>Erkek & Kadın Gömlekleri</h3>
             <p>
@@ -86,7 +86,7 @@ export default function TurkishHomePage() {
             </p>
           </article>
 
-          <article className="snapshot-card">
+          <article className="snapshot-card" data-reveal>
             <span>02</span>
             <h3>MOQ 300+ adet</h3>
             <p>
@@ -95,7 +95,7 @@ export default function TurkishHomePage() {
             </p>
           </article>
 
-          <article className="snapshot-card">
+          <article className="snapshot-card" data-reveal>
             <span>03</span>
             <h3>Günlük 1.100 Gömlek</h3>
             <p>
@@ -104,7 +104,7 @@ export default function TurkishHomePage() {
             </p>
           </article>
 
-          <article className="snapshot-card">
+          <article className="snapshot-card" data-reveal>
             <span>04</span>
             <h3>Numuneden Toplu Üretime</h3>
             <p>
@@ -116,7 +116,7 @@ export default function TurkishHomePage() {
       </section>
 
       <section className="story-grid" id="atelier">
-        <div className="story-media">
+        <div className="story-media" data-reveal>
           <div className="pattern-panel">
             <Image
               src="/assets/kumas-turu.png"
@@ -135,7 +135,7 @@ export default function TurkishHomePage() {
           </div>
         </div>
 
-        <div className="story-copy">
+        <div className="story-copy" data-reveal>
           <p className="eyebrow">Üretici Profili</p>
           <h2>Atölye Disiplini, İhracata Hazır Üretim.</h2>
           <p>
@@ -161,7 +161,7 @@ export default function TurkishHomePage() {
       </section>
 
       <section className="showcase-video" id="process">
-        <div className="video-frame">
+        <div className="video-frame" data-reveal>
           <video
             src="/assets/video-process.mp4"
             autoPlay
@@ -175,7 +175,7 @@ export default function TurkishHomePage() {
       </section>
 
       <section className="collection" id="collection">
-        <div className="section-heading">
+        <div className="section-heading" data-reveal>
           <div>
             <p className="eyebrow">Üretim Programları</p>
             <h2>Temel Ürün Kategorileri</h2>
@@ -184,7 +184,7 @@ export default function TurkishHomePage() {
         </div>
 
         <div className="collection-grid">
-          <article className="product-card product-card-tall product-card-hover-color">
+          <article className="product-card product-card-tall product-card-hover-color" data-reveal>
             <Image
               src="/assets/iconlast-1.jpg"
               alt="Klasik gömlek üretim örneği"
@@ -197,7 +197,7 @@ export default function TurkishHomePage() {
             </div>
           </article>
 
-          <article className="product-card product-card-offset product-card-hover-color">
+          <article className="product-card product-card-offset product-card-hover-color" data-reveal>
             <Image
               src="/assets/iconlast-2.png"
               alt="Casual gömlek üretim örneği"
@@ -210,7 +210,7 @@ export default function TurkishHomePage() {
             </div>
           </article>
 
-          <article className="product-card product-card-hover-color">
+          <article className="product-card product-card-hover-color" data-reveal>
             <Image
               src="/assets/iconlast-4.png"
               alt="Gömlek üretim detayı"
@@ -223,7 +223,7 @@ export default function TurkishHomePage() {
             </div>
           </article>
 
-          <article className="product-card product-card-wide product-card-hover-color">
+          <article className="product-card product-card-wide product-card-hover-color" data-reveal>
             <Image
               src="/assets/iconlast-5.png"
               alt="Sezonluk gömlek koleksiyonu detayı"
@@ -239,7 +239,7 @@ export default function TurkishHomePage() {
       </section>
 
       <section className="contact-banner" id="contact">
-        <div className="contact-copy">
+        <div className="contact-copy" data-reveal>
           <p className="eyebrow">Üretim Talebi</p>
           <h2>
             Üretim

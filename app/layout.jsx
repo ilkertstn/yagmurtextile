@@ -1,5 +1,7 @@
+import Script from "next/script";
 import { Cormorant_Garamond, Manrope } from "next/font/google";
 import SiteHeader from "../components/site-header";
+import ScrollReveal from "../components/scroll-reveal";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -87,6 +89,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${cormorant.variable} ${manrope.variable}`}>
       <body>
+        <Script id="clarity" strategy="afterInteractive">
+          {`(function(c,l,a,r,i,t,y){
+              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+          })(window, document, "clarity", "script", "y29i3enxx9");`}
+        </Script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -109,6 +118,7 @@ export default function RootLayout({ children }) {
           <SiteHeader />
           {children}
         </div>
+        <ScrollReveal />
       </body>
     </html>
   );

@@ -68,7 +68,7 @@ export default function HomePage() {
       </section>
 
       <section className="production-snapshot" aria-labelledby="production-snapshot-title">
-        <div className="snapshot-heading">
+        <div className="snapshot-heading" data-reveal>
           <p className="eyebrow">Production At A Glance</p>
           <h2 id="production-snapshot-title">
             Essential manufacturing details for private label shirt programs.
@@ -76,7 +76,7 @@ export default function HomePage() {
         </div>
 
         <div className="snapshot-grid">
-          <article className="snapshot-card">
+          <article className="snapshot-card" data-reveal>
             <span>01</span>
             <h3>Men's & Women's Shirts</h3>
             <p>
@@ -85,7 +85,7 @@ export default function HomePage() {
             </p>
           </article>
 
-          <article className="snapshot-card">
+          <article className="snapshot-card" data-reveal>
             <span>02</span>
             <h3>MOQ 300+ pcs</h3>
             <p>
@@ -94,7 +94,7 @@ export default function HomePage() {
             </p>
           </article>
 
-          <article className="snapshot-card">
+          <article className="snapshot-card" data-reveal>
             <span>03</span>
             <h3>1,100 Shirts Per Day</h3>
             <p>
@@ -103,7 +103,7 @@ export default function HomePage() {
             </p>
           </article>
 
-          <article className="snapshot-card">
+          <article className="snapshot-card" data-reveal>
             <span>04</span>
             <h3>Sampling To Bulk</h3>
             <p>
@@ -115,7 +115,7 @@ export default function HomePage() {
       </section>
 
       <section className="story-grid" id="atelier">
-        <div className="story-media">
+        <div className="story-media" data-reveal>
           <div className="pattern-panel">
             <Image
               src="/assets/kumas-turu.png"
@@ -134,7 +134,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="story-copy">
+        <div className="story-copy" data-reveal>
           <p className="eyebrow">Manufacturer Profile</p>
           <h2>Workshop Discipline, Export-Ready Production.</h2>
           <p>
@@ -161,7 +161,7 @@ export default function HomePage() {
       </section>
 
       <section className="showcase-video" id="process">
-        <div className="video-frame">
+        <div className="video-frame" data-reveal>
           <video
             src="/assets/video-process.mp4"
             autoPlay
@@ -175,7 +175,7 @@ export default function HomePage() {
       </section>
 
       <section className="collection" id="collection">
-        <div className="section-heading">
+        <div className="section-heading" data-reveal>
           <div>
             <p className="eyebrow">Production Programs</p>
             <h2>Core Product Categories</h2>
@@ -184,7 +184,7 @@ export default function HomePage() {
         </div>
 
         <div className="collection-grid">
-          <article className="product-card product-card-tall product-card-hover-color">
+          <article className="product-card product-card-tall product-card-hover-color" data-reveal>
             <Image
               src="/assets/iconlast-1.jpg"
               alt="Formal shirt manufacturing sample"
@@ -197,7 +197,7 @@ export default function HomePage() {
             </div>
           </article>
 
-          <article className="product-card product-card-offset product-card-hover-color">
+          <article className="product-card product-card-offset product-card-hover-color" data-reveal>
             <Image
               src="/assets/iconlast-2.png"
               alt="Casual shirt production sample"
@@ -210,7 +210,7 @@ export default function HomePage() {
             </div>
           </article>
 
-          <article className="product-card product-card-hover-color">
+          <article className="product-card product-card-hover-color" data-reveal>
             <Image
               src="/assets/iconlast-4.png"
               alt="Uniform shirt production detail"
@@ -223,7 +223,7 @@ export default function HomePage() {
             </div>
           </article>
 
-          <article className="product-card product-card-wide product-card-hover-color">
+          <article className="product-card product-card-wide product-card-hover-color" data-reveal>
             <Image
               src="/assets/iconlast-5.png"
               alt="Seasonal shirt collection detail"
@@ -239,7 +239,7 @@ export default function HomePage() {
       </section>
 
       <section className="contact-banner" id="contact">
-        <div className="contact-copy">
+        <div className="contact-copy" data-reveal>
           <p className="eyebrow">Production Inquiry</p>
           <h2>
             Start your
