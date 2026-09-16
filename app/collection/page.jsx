@@ -54,7 +54,7 @@ export default function CollectionPage() {
     "@type": "ItemList",
     itemListElement: [
       {
-        "@type": "Product",
+        "@type": "Service",
         position: 1,
         name: "Classic Formal Shirt",
         description:
@@ -64,7 +64,7 @@ export default function CollectionPage() {
         url: "https://www.mayagmurtextile.com/collection",
       },
       {
-        "@type": "Product",
+        "@type": "Service",
         position: 2,
         name: "Casual Overshirt",
         description:
@@ -74,7 +74,7 @@ export default function CollectionPage() {
         url: "https://www.mayagmurtextile.com/collection",
       },
       {
-        "@type": "Product",
+        "@type": "Service",
         position: 3,
         name: "Tropical Resort Shirt",
         description:
@@ -84,7 +84,7 @@ export default function CollectionPage() {
         url: "https://www.mayagmurtextile.com/collection",
       },
       {
-        "@type": "Product",
+        "@type": "Service",
         position: 4,
         name: "Aviation & Corporate Uniforms",
         description:

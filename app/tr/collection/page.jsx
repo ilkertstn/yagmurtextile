@@ -44,7 +44,7 @@ export default function TurkishCollectionPage() {
     "@type": "ItemList",
     itemListElement: [
       {
-        "@type": "Product",
+        "@type": "Service",
         position: 1,
         name: "Klasik Formal Gömlek",
         description:
@@ -54,7 +54,7 @@ export default function TurkishCollectionPage() {
         url: "https://www.mayagmurtextile.com/tr/collection",
       },
       {
-        "@type": "Product",
+        "@type": "Service",
         position: 2,
         name: "Casual Overshirt",
         description:
@@ -64,7 +64,7 @@ export default function TurkishCollectionPage() {
         url: "https://www.mayagmurtextile.com/tr/collection",
       },
       {
-        "@type": "Product",
+        "@type": "Service",
         position: 3,
         name: "Tropikal Desenli Resort Gömlek",
         description:
@@ -74,7 +74,7 @@ export default function TurkishCollectionPage() {
         url: "https://www.mayagmurtextile.com/tr/collection",
       },
       {
-        "@type": "Product",
+        "@type": "Service",
         position: 4,
         name: "Aviation & Corporate Uniforms",
         description:
