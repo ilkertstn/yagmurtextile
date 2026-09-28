@@ -156,8 +156,8 @@ export default function CollectionPage() {
             <span>product families</span>
           </div>
           <div>
-            <strong>50+</strong>
-            <span>minimum order; below 50 custom</span>
+            <strong>250+</strong>
+            <span>minimum order; below 250 custom</span>
           </div>
           <div>
             <strong>Flexible</strong>
@@ -196,7 +196,7 @@ export default function CollectionPage() {
               </div>
               <div>
                 <dt>MOQ</dt>
-                <dd>50+ pcs</dd>
+                <dd>250+ pcs</dd>
               </div>
               <div>
                 <dt>Product</dt>
@@ -234,7 +234,7 @@ export default function CollectionPage() {
               </div>
               <div>
                 <dt>MOQ</dt>
-                <dd>50+ pcs</dd>
+                <dd>250+ pcs</dd>
               </div>
               <div>
                 <dt>Product</dt>
@@ -272,7 +272,7 @@ export default function CollectionPage() {
               </div>
               <div>
                 <dt>MOQ</dt>
-                <dd>50+ pcs</dd>
+                <dd>250+ pcs</dd>
               </div>
               <div>
                 <dt>Product</dt>
@@ -310,7 +310,7 @@ export default function CollectionPage() {
               </div>
               <div>
                 <dt>MOQ</dt>
-                <dd>50+ pcs</dd>
+                <dd>250+ pcs</dd>
               </div>
               <div>
                 <dt>Product</dt>

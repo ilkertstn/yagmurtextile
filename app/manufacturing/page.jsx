@@ -5,7 +5,7 @@ import MailtoContactForm from "../../components/mailto-contact-form";
 export const metadata = {
   title: "Private Label Shirt Manufacturing",
   description:
-    "Private label shirt manufacturing in Istanbul with 50+ pcs MOQ, workshop quality control, and export-ready production for wholesale and brand partners.",
+    "Private label shirt manufacturing in Istanbul with 250+ pcs MOQ, workshop quality control, and export-ready production for wholesale and brand partners.",
   alternates: {
     canonical: "/manufacturing",
     languages: {
@@ -57,7 +57,7 @@ export default function ManufacturingPage() {
         name: "What is your minimum order quantity (MOQ)?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Our MOQ starts from 50 pieces per style/color, with custom development available for smaller orders and new brands.",
+          text: "Our MOQ starts from 250 pieces per style/color, with custom development available for smaller orders and new brands.",
         },
       },
       {
@@ -130,7 +130,7 @@ export default function ManufacturingPage() {
           <p className="eyebrow">Private Label Shirt Manufacturing — Istanbul</p>
           <h1>Private Label Shirt Manufacturing at Scale.</h1>
           <p className="lead">
-            We manufacture private label shirts from 50+ pieces MOQ, with
+            We manufacture private label shirts from 250+ pieces MOQ, with
             structured production, consistent quality, and export-ready
             execution for global partners.
           </p>
@@ -377,7 +377,7 @@ export default function ManufacturingPage() {
           <article className="faq-item">
             <h3>What is your minimum order quantity (MOQ)?</h3>
             <p>
-              Our MOQ starts from 50 pieces per style/color, with custom
+              Our MOQ starts from 250 pieces per style/color, with custom
               development available for smaller orders and new brands.
             </p>
           </article>

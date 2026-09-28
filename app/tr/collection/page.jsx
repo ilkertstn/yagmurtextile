@@ -142,7 +142,7 @@ export default function TurkishCollectionPage() {
             <span>ürün ailesi</span>
           </div>
           <div>
-            <strong>50+</strong>
+            <strong>250+</strong>
             <span>minimum sipariş; altı özel üretim</span>
           </div>
           <div>
@@ -183,7 +183,7 @@ export default function TurkishCollectionPage() {
               </div>
               <div>
                 <dt>MOQ</dt>
-                <dd>50+ adet</dd>
+                <dd>250+ adet</dd>
               </div>
               <div>
                 <dt>Ürün</dt>
@@ -223,7 +223,7 @@ export default function TurkishCollectionPage() {
               </div>
               <div>
                 <dt>MOQ</dt>
-                <dd>50+ adet</dd>
+                <dd>250+ adet</dd>
               </div>
               <div>
                 <dt>Ürün</dt>
@@ -263,7 +263,7 @@ export default function TurkishCollectionPage() {
               </div>
               <div>
                 <dt>MOQ</dt>
-                <dd>50+ adet</dd>
+                <dd>250+ adet</dd>
               </div>
               <div>
                 <dt>Ürün</dt>
@@ -303,7 +303,7 @@ export default function TurkishCollectionPage() {
               </div>
               <div>
                 <dt>MOQ</dt>
-                <dd>50+ adet</dd>
+                <dd>250+ adet</dd>
               </div>
               <div>
                 <dt>Ürün</dt>

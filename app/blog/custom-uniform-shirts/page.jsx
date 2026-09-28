@@ -233,7 +233,7 @@ export default function CustomUniformShirtsPost() {
         <ul>
           <li>
             <strong>MOQ:</strong> Minimum order quantities vary widely by
-            manufacturer. We start production from 50 pieces per style and
+            manufacturer. We start production from 250 pieces per style and
             color, with smaller runs handled as custom production.
           </li>
           <li>
@@ -294,8 +294,8 @@ export default function CustomUniformShirtsPost() {
           <article className="faq-item">
             <h3>How many custom uniform shirts do I need to order?</h3>
             <p>
-              It depends on the manufacturer. Our production starts from 50
-              pieces per style and color; orders below 50 are handled as
+              It depends on the manufacturer. Our production starts from 250
+              pieces per style and color; orders below 250 are handled as
               custom production.
             </p>
           </article>

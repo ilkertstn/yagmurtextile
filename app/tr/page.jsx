@@ -88,9 +88,9 @@ export default function TurkishHomePage() {
 
           <article className="snapshot-card" data-reveal>
             <span>02</span>
-            <h3>MOQ 300+ adet</h3>
+            <h3>MOQ 250+ adet</h3>
             <p>
-              Minimum sipariş planı 50 adet ve üzeri için başlar. 50 adedin
+              Minimum sipariş planı 250 adet ve üzeri için başlar. 250 adedin
               altındaki talepler özel üretim kapsamında değerlendirilir.
             </p>
           </article>

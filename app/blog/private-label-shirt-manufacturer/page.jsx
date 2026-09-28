@@ -101,7 +101,7 @@ export default function PrivateLabelShirtManufacturerPost() {
           MOQ determines how easily you can test a new style or launch a
           smaller collection without overcommitting on inventory. Many
           factories only work at bulk volumes; others, like ours, structure
-          production from 50 pieces per style/color so newer brands can start
+          production from 250 pieces per style/color so newer brands can start
           without excessive upfront risk.
         </p>
 

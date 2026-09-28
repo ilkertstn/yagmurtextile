@@ -5,7 +5,7 @@ import MailtoContactForm from "../../../components/mailto-contact-form";
 export const metadata = {
   title: "Private Label Gömlek Üretimi",
   description:
-    "İstanbul'da private label gömlek üretimi: 50+ adet MOQ, atölye kalite kontrolü ve ihracata hazır üretim ile toptan ve marka ortaklarına hizmet.",
+    "İstanbul'da private label gömlek üretimi: 250+ adet MOQ, atölye kalite kontrolü ve ihracata hazır üretim ile toptan ve marka ortaklarına hizmet.",
   alternates: {
     canonical: "/tr/manufacturing",
     languages: {
@@ -47,7 +47,7 @@ export default function TurkishManufacturingPage() {
         name: "Minimum sipariş adediniz (MOQ) nedir?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "MOQ'muz model/renk başına 50 adetten başlıyor; daha küçük siparişler ve yeni markalar için özel geliştirme seçenekleri de mevcut.",
+          text: "MOQ'muz model/renk başına 250 adetten başlıyor; daha küçük siparişler ve yeni markalar için özel geliştirme seçenekleri de mevcut.",
         },
       },
       {
@@ -116,7 +116,7 @@ export default function TurkishManufacturingPage() {
           <p className="eyebrow">Private Label Gömlek Üretimi - İstanbul</p>
           <h1>Private Label Gömlek Üretimi ve Ölçekli Kapasite.</h1>
           <p className="lead">
-            50+ adetten başlayan MOQ ile erkek ve kadın gömleklerinde düzenli
+            250+ adetten başlayan MOQ ile erkek ve kadın gömleklerinde düzenli
             üretim kapasitesi, kalite kontrol ve ihracata hazır süreçlerle
             markalara üretim desteği sağlıyoruz.
           </p>
@@ -129,7 +129,7 @@ export default function TurkishManufacturingPage() {
           <span>Günlük Gömlek Kapasitesi</span>
         </div>
         <div>
-          <strong>50+</strong>
+          <strong>250+</strong>
           <span>Minimum Sipariş / Altı Özel Üretim</span>
         </div>
         <div>
@@ -314,7 +314,7 @@ export default function TurkishManufacturingPage() {
           <article className="faq-item">
             <h3>Minimum sipariş adediniz (MOQ) nedir?</h3>
             <p>
-              MOQ'muz model/renk başına 50 adetten başlıyor; daha küçük
+              MOQ'muz model/renk başına 250 adetten başlıyor; daha küçük
               siparişler ve yeni markalar için özel geliştirme seçenekleri de
               mevcut.
             </p>

@@ -272,8 +272,8 @@ export default function TurkishCustomUniformShirtsPost() {
         <ul>
           <li>
             <strong>Minimum sipariş adedi:</strong> Üreticiden üreticiye
-            değişir. Biz model ve renk başına 50 adetten itibaren üretime
-            başlıyoruz; 50 adedin altındaki siparişler özel üretim olarak
+            değişir. Biz model ve renk başına 250 adetten itibaren üretime
+            başlıyoruz; 250 adedin altındaki siparişler özel üretim olarak
             değerlendirilir.
           </li>
           <li>
@@ -328,8 +328,8 @@ export default function TurkishCustomUniformShirtsPost() {
           <article className="faq-item">
             <h3>Toptan iş gömleği için minimum sipariş kaç adet?</h3>
             <p>
-              Üreticiye göre değişir. Üretimimiz model ve renk başına 50
-              adetten başlar; 50 adedin altındaki siparişler özel üretim
+              Üreticiye göre değişir. Üretimimiz model ve renk başına 250
+              adetten başlar; 250 adedin altındaki siparişler özel üretim
               olarak değerlendirilir.
             </p>
           </article>
