@@ -28,6 +28,12 @@ export const metadata = {
 
 const posts = [
   {
+    slug: "custom-uniform-shirts",
+    title: "İş Gömleği Rehberi: Erkek ve Kadın Modelleri, Kumaş ve Logo Seçimi",
+    excerpt:
+      "Erkek ve kadın iş gömleği modelleri, kumaş ve renk seçimi, logolu kurumsal gömlek ve toptan sipariş sürecinde bilmeniz gerekenler.",
+  },
+  {
     slug: "shirt-sleeve-types",
     title: "Gömlek Kol Tipleri Nelerdir? Kesim ve Manşet Rehberi",
     excerpt:

@@ -28,6 +28,12 @@ export const metadata = {
 
 const posts = [
   {
+    slug: "custom-uniform-shirts",
+    title: "Custom Uniform Shirts: A Buyer's Guide to Button-Down Work Shirts for Your Team",
+    excerpt:
+      "Fabric, sleeve length, color, embroidered logos, and bulk ordering — how to choose uniform shirts your team will actually wear.",
+  },
+  {
     slug: "private-label-shirt-manufacturer",
     title: "Choosing a Private Label Shirt Manufacturer: What to Look For",
     excerpt:
